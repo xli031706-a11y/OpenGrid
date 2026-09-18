@@ -1,5 +1,3 @@
-# OpenGrid
-OpenGrid Planner develops open-source transmission planning workflows using MATPOWER, Python, and university-accessible tools to replicate contingency, transfer, interconnection, and stability studies. 
 
 # Project Proposal 
 
@@ -34,7 +32,7 @@ The semester will end with a reproducible study that identifies thermal and volt
 * Create the GitHub repository and open-source project structure.
 * Set up MATPOWER/GNU Octave and supporting Python tools.
 * Validate the IEEE 9-bus base-case AC power flow.
-* Become familiar with bus, generator, load, and transmission-line data.
+* Become familiar with bus, generator, load, andyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy transmission-line data.
 * Create and validate the wind-integrated IEEE 9-bus case.
 * Extract baseline voltage, generation, reactive-power, and line-flow results.
 
