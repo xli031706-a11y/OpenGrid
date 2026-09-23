@@ -1,0 +1,2639 @@
+<project name="New_IEEE_09_CT" version="4.5.3" schema="0" Target="EMTDC">
+  <paramlist name="Settings">
+    <param name="creator" value="adarbandi,1397677439" />
+    <param name="time_duration" value="2" />
+    <param name="time_step" value="50" />
+    <param name="sample_step" value="50" />
+    <param name="chatter_threshold" value=".001" />
+    <param name="branch_threshold" value=".0005" />
+    <param name="StartType" value="0" />
+    <param name="PlotType" value="0" />
+    <param name="output_filename" value="$(Namespace).out" />
+    <param name="SnapType" value="0" />
+    <param name="SnapTime" value="0.3" />
+    <param name="snapshot_filename" value="$(Namespace).snp" />
+    <param name="MrunType" value="0" />
+    <param name="Mruns" value="1" />
+    <param name="Scenario" value="" />
+    <param name="Advanced" value="10239" />
+    <param name="Options" value="16" />
+    <param name="Build" value="18" />
+    <param name="Warn" value="0" />
+    <param name="Check" value="0" />
+    <param name="description" value="" />
+    <param name="revisor" value="ctaylor, 1408559660" />
+    <param name="startup_filename" value="" />
+  </paramlist>
+  <paramlist name="Validation" />
+  <hierarchy>
+    <call name="Station" link="294101010" z="0" instance="0" view="false">
+      <call name="Main" link="84624640" z="0" instance="0" view="true">
+        <call name="psse" link="782780565" z="10" instance="0" view="false" />
+        <call name="T6_9" link="2044306914" z="90" instance="0" view="false">
+          <call name="T6_10" link="2008548152" z="-1" instance="0" view="false" />
+        </call>
+        <call name="T4_5" link="1426503440" z="100" instance="0" view="false">
+          <call name="T4_7" link="724169283" z="-1" instance="0" view="false" />
+        </call>
+        <call name="T4_6" link="1036163106" z="110" instance="0" view="false">
+          <call name="T4_8" link="1669850792" z="-1" instance="0" view="false" />
+        </call>
+        <call name="T5_7" link="1200896919" z="80" instance="0" view="false">
+          <call name="T5_8" link="802219032" z="-1" instance="0" view="false" />
+        </call>
+        <call name="T8_9" link="238356294" z="60" instance="0" view="false">
+          <call name="TLine_2" link="1354660837" z="-1" instance="0" view="false" />
+        </call>
+        <call name="T7_8" link="8336909" z="50" instance="0" view="false">
+          <call name="TLine_1" link="392134517" z="-1" instance="0" view="false" />
+        </call>
+      </call>
+    </call>
+  </hierarchy>
+  <definitions>
+    <Definition classid="RowDefn" name="TLine_2" group="" url="" version="RowDefn" build="RowDefn" crc="54778497" key="" view="false" date="1408552989">
+      <paramlist name="">
+        <param name="Description" value="" />
+        <param name="type" value="TLine" />
+      </paramlist>
+      <schematic classid="RowCanvas">
+        <paramlist>
+          <param name="show_grid" value="0" />
+          <param name="size" value="0" />
+          <param name="orient" value="1" />
+          <param name="show_border" value="0" />
+        </paramlist>
+        <paramlist>
+          <param name="show_grid" value="0" />
+          <param name="size" value="0" />
+          <param name="orient" value="1" />
+          <param name="show_border" value="0" />
+        </paramlist>
+        <User classid="UserCmp" defn="master:Line_Berg_Options" id="1167246684" x="576" y="180" w="452" h="148" z="0" orient="0" link="-1" layer="" q="4">
+          <paramlist link="-1" name="">
+            <param name="BDamp" value="0" />
+            <param name="Interp1" value="1" />
+            <param name="F1" value="2000 [Hz]" />
+            <param name="TZ" value="0.005 [ms]" />
+            <param name="TP" value="0.005 [ms]" />
+            <param name="Inflen" value="0" />
+          </paramlist>
+        </User>
+        <User classid="UserCmp" defn="master:Line_ManualYZ" id="458304764" x="576" y="342" w="452" h="218" z="0" orient="0" link="-1" layer="" q="4">
+          <paramlist link="-1" name="">
+            <param name="NCond" value="3" />
+            <param name="PU" value="3" />
+            <param name="Estim" value="1" />
+            <param name="REst" value="10.15" />
+            <param name="ZEst" value="1.915" />
+            <param name="TEst" value="1.36" />
+            <param name="LONGLN" value="0" />
+            <param name="VR" value="230 [kV]" />
+            <param name="MVA" value="100 [MVA]" />
+            <param name="RPUP" value="6.76e-8 [pu/m]" />
+            <param name="XLPUP" value="9.6e-7 [pu/m]" />
+            <param name="XCPUP" value="5.78e5 [pu*m]" />
+            <param name="RPUZ" value="6.86e-7 [pu/m]" />
+            <param name="XLPUZ" value="2.5e-6 [pu/m]" />
+            <param name="XCPUZ" value="8.14e5 [pu*m]" />
+            <param name="RPUZM" value="5.35e-7 [pu/m]" />
+            <param name="XLPUZM" value="6.37e-7 [pu/m]" />
+            <param name="XCPUZM" value="5.4e7 [pu*m]" />
+            <param name="RP" value="3.576e-5 [ohm/m]" />
+            <param name="XLP" value="5.078e-4 [ohm/m]" />
+            <param name="XCP" value="305.8 [Mohm*m]" />
+            <param name="RZ" value="3.63e-4 [ohm/m]" />
+            <param name="XLZ" value="1.323e-3 [ohm/m]" />
+            <param name="XCZ" value="430.6 [Mohm*m]" />
+            <param name="RZM" value="2.83e-4 [ohm/m]" />
+            <param name="XLZM" value="3.37e-4 [ohm/m]" />
+            <param name="XCZM" value="28560.0 [Mohm*m]" />
+            <param name="RTP" value="3.576e-5 [ohm/m]" />
+            <param name="TTP" value="3.4185e-9 [s/m]" />
+            <param name="ZTP" value="394.06 [ohm]" />
+            <param name="RTZ" value="3.63e-4 [ohm/m]" />
+            <param name="TTZ" value="4.65e-9 [s/m]" />
+            <param name="ZTZ" value="754.77 [ohm]" />
+            <param name="RTZM" value="2.83e-4 [ohm/m]" />
+            <param name="TTZM" value="0.288e-9 [s/m]" />
+            <param name="ZTZM" value="3102.4 [ohm]" />
+            <param name="VR2" value="230 [kV]" />
+            <param name="MVA2" value="100 [MVA]" />
+            <param name="RPUP2" value="0.0119 [pu/m]" />
+            <param name="XLPUP2" value="0.1008 [pu/m]" />
+            <param name="BPUP2" value="0.2090 [pu/m]" />
+            <param name="RPUZ2" value="6.86e-7 [pu/m]" />
+            <param name="XLPUZ2" value="2.5e-6 [pu/m]" />
+            <param name="BPUZ2" value="1.23e-6 [pu/m]" />
+            <param name="RPUZM2" value="5.35e-7 [pu/m]" />
+            <param name="XLPUZM2" value="6.37e-7 [pu/m]" />
+            <param name="BPUZM2" value="1.85e-8 [pu/m]" />
+            <param name="fname" value="inputYZ.txt" />
+            <param name="path" value="0" />
+            <param name="dformat" value="0" />
+            <param name="fname2" value="inputYZ.txt" />
+            <param name="path2" value="0" />
+          </paramlist>
+        </User>
+      </schematic>
+      <references />
+    </Definition>
+    <Definition classid="RowDefn" name="TLine_1" group="" url="" version="RowDefn" build="RowDefn" crc="121649703" key="" view="false" date="1408552989">
+      <paramlist name="">
+        <param name="Description" value="" />
+        <param name="type" value="TLine" />
+      </paramlist>
+      <schematic classid="RowCanvas">
+        <paramlist>
+          <param name="show_grid" value="0" />
+          <param name="size" value="0" />
+          <param name="orient" value="1" />
+          <param name="show_border" value="0" />
+        </paramlist>
+        <paramlist>
+          <param name="show_grid" value="0" />
+          <param name="size" value="0" />
+          <param name="orient" value="1" />
+          <param name="show_border" value="0" />
+        </paramlist>
+        <User classid="UserCmp" defn="master:Line_Berg_Options" id="107745172" x="576" y="180" w="452" h="148" z="0" orient="0" link="-1" layer="" q="4">
+          <paramlist link="-1" name="">
+            <param name="BDamp" value="0" />
+            <param name="Interp1" value="1" />
+            <param name="F1" value="2000 [Hz]" />
+            <param name="TZ" value="0.005 [ms]" />
+            <param name="TP" value="0.005 [ms]" />
+            <param name="Inflen" value="0" />
+          </paramlist>
+        </User>
+        <User classid="UserCmp" defn="master:Line_ManualYZ" id="243188917" x="576" y="342" w="452" h="218" z="0" orient="0" link="-1" layer="" q="4">
+          <paramlist link="-1" name="">
+            <param name="NCond" value="3" />
+            <param name="PU" value="3" />
+            <param name="Estim" value="1" />
+            <param name="REst" value="10.15" />
+            <param name="ZEst" value="1.915" />
+            <param name="TEst" value="1.36" />
+            <param name="LONGLN" value="0" />
+            <param name="VR" value="230 [kV]" />
+            <param name="MVA" value="100 [MVA]" />
+            <param name="RPUP" value="6.76e-8 [pu/m]" />
+            <param name="XLPUP" value="9.6e-7 [pu/m]" />
+            <param name="XCPUP" value="5.78e5 [pu*m]" />
+            <param name="RPUZ" value="6.86e-7 [pu/m]" />
+            <param name="XLPUZ" value="2.5e-6 [pu/m]" />
+            <param name="XCPUZ" value="8.14e5 [pu*m]" />
+            <param name="RPUZM" value="5.35e-7 [pu/m]" />
+            <param name="XLPUZM" value="6.37e-7 [pu/m]" />
+            <param name="XCPUZM" value="5.4e7 [pu*m]" />
+            <param name="RP" value="3.576e-5 [ohm/m]" />
+            <param name="XLP" value="5.078e-4 [ohm/m]" />
+            <param name="XCP" value="305.8 [Mohm*m]" />
+            <param name="RZ" value="3.63e-4 [ohm/m]" />
+            <param name="XLZ" value="1.323e-3 [ohm/m]" />
+            <param name="XCZ" value="430.6 [Mohm*m]" />
+            <param name="RZM" value="2.83e-4 [ohm/m]" />
+            <param name="XLZM" value="3.37e-4 [ohm/m]" />
+            <param name="XCZM" value="28560.0 [Mohm*m]" />
+            <param name="RTP" value="3.576e-5 [ohm/m]" />
+            <param name="TTP" value="3.4185e-9 [s/m]" />
+            <param name="ZTP" value="394.06 [ohm]" />
+            <param name="RTZ" value="3.63e-4 [ohm/m]" />
+            <param name="TTZ" value="4.65e-9 [s/m]" />
+            <param name="ZTZ" value="754.77 [ohm]" />
+            <param name="RTZM" value="2.83e-4 [ohm/m]" />
+            <param name="TTZM" value="0.288e-9 [s/m]" />
+            <param name="ZTZM" value="3102.4 [ohm]" />
+            <param name="VR2" value="230 [kV]" />
+            <param name="MVA2" value="100 [MVA]" />
+            <param name="RPUP2" value="0.0085 [pu/m]" />
+            <param name="XLPUP2" value="0.0576 [pu/m]" />
+            <param name="BPUP2" value="0.1490 [pu/m]" />
+            <param name="RPUZ2" value="6.86e-7 [pu/m]" />
+            <param name="XLPUZ2" value="2.5e-6 [pu/m]" />
+            <param name="BPUZ2" value="1.23e-6 [pu/m]" />
+            <param name="RPUZM2" value="5.35e-7 [pu/m]" />
+            <param name="XLPUZM2" value="6.37e-7 [pu/m]" />
+            <param name="BPUZM2" value="1.85e-8 [pu/m]" />
+            <param name="fname" value="inputYZ.txt" />
+            <param name="path" value="0" />
+            <param name="dformat" value="0" />
+            <param name="fname2" value="inputYZ.txt" />
+            <param name="path2" value="0" />
+          </paramlist>
+        </User>
+      </schematic>
+      <references />
+    </Definition>
+    <Definition classid="RowDefn" name="T6_10" group="" url="" version="RowDefn" build="RowDefn" crc="55888729" key="" view="false" date="1408552989">
+      <paramlist name="">
+        <param name="Description" value="" />
+        <param name="type" value="TLine" />
+      </paramlist>
+      <schematic classid="RowCanvas">
+        <paramlist>
+          <param name="show_grid" value="0" />
+          <param name="size" value="0" />
+          <param name="orient" value="1" />
+          <param name="show_border" value="0" />
+        </paramlist>
+        <paramlist>
+          <param name="show_grid" value="0" />
+          <param name="size" value="0" />
+          <param name="orient" value="1" />
+          <param name="show_border" value="0" />
+        </paramlist>
+        <User classid="UserCmp" defn="master:Line_Berg_Options" id="1784712158" x="576" y="180" w="452" h="148" z="0" orient="0" link="-1" layer="" q="4">
+          <paramlist link="-1" name="">
+            <param name="BDamp" value="0" />
+            <param name="Interp1" value="1" />
+            <param name="F1" value="2000 [Hz]" />
+            <param name="TZ" value="0.005 [ms]" />
+            <param name="TP" value="0.005 [ms]" />
+            <param name="Inflen" value="0" />
+          </paramlist>
+        </User>
+        <User classid="UserCmp" defn="master:Line_ManualYZ" id="523586220" x="576" y="342" w="452" h="218" z="0" orient="0" link="-1" layer="" q="4">
+          <paramlist link="-1" name="">
+            <param name="NCond" value="3" />
+            <param name="PU" value="3" />
+            <param name="Estim" value="1" />
+            <param name="REst" value="10.15" />
+            <param name="ZEst" value="1.915" />
+            <param name="TEst" value="1.36" />
+            <param name="LONGLN" value="0" />
+            <param name="VR" value="230 [kV]" />
+            <param name="MVA" value="100 [MVA]" />
+            <param name="RPUP" value="6.76e-8 [pu/m]" />
+            <param name="XLPUP" value="9.6e-7 [pu/m]" />
+            <param name="XCPUP" value="5.78e5 [pu*m]" />
+            <param name="RPUZ" value="6.86e-7 [pu/m]" />
+            <param name="XLPUZ" value="2.5e-6 [pu/m]" />
+            <param name="XCPUZ" value="8.14e5 [pu*m]" />
+            <param name="RPUZM" value="5.35e-7 [pu/m]" />
+            <param name="XLPUZM" value="6.37e-7 [pu/m]" />
+            <param name="XCPUZM" value="5.4e7 [pu*m]" />
+            <param name="RP" value="3.576e-5 [ohm/m]" />
+            <param name="XLP" value="5.078e-4 [ohm/m]" />
+            <param name="XCP" value="305.8 [Mohm*m]" />
+            <param name="RZ" value="3.63e-4 [ohm/m]" />
+            <param name="XLZ" value="1.323e-3 [ohm/m]" />
+            <param name="XCZ" value="430.6 [Mohm*m]" />
+            <param name="RZM" value="2.83e-4 [ohm/m]" />
+            <param name="XLZM" value="3.37e-4 [ohm/m]" />
+            <param name="XCZM" value="28560.0 [Mohm*m]" />
+            <param name="RTP" value="3.576e-5 [ohm/m]" />
+            <param name="TTP" value="3.4185e-9 [s/m]" />
+            <param name="ZTP" value="394.06 [ohm]" />
+            <param name="RTZ" value="3.63e-4 [ohm/m]" />
+            <param name="TTZ" value="4.65e-9 [s/m]" />
+            <param name="ZTZ" value="754.77 [ohm]" />
+            <param name="RTZM" value="2.83e-4 [ohm/m]" />
+            <param name="TTZM" value="0.288e-9 [s/m]" />
+            <param name="ZTZM" value="3102.4 [ohm]" />
+            <param name="VR2" value="230 [kV]" />
+            <param name="MVA2" value="100 [MVA]" />
+            <param name="RPUP2" value="0.0390 [pu/m]" />
+            <param name="XLPUP2" value="0.1738 [pu/m]" />
+            <param name="BPUP2" value="0.3580 [pu/m]" />
+            <param name="RPUZ2" value="6.86e-7 [pu/m]" />
+            <param name="XLPUZ2" value="2.5e-6 [pu/m]" />
+            <param name="BPUZ2" value="1.23e-6 [pu/m]" />
+            <param name="RPUZM2" value="5.35e-7 [pu/m]" />
+            <param name="XLPUZM2" value="6.37e-7 [pu/m]" />
+            <param name="BPUZM2" value="1.85e-8 [pu/m]" />
+            <param name="fname" value="inputYZ.txt" />
+            <param name="path" value="0" />
+            <param name="dformat" value="0" />
+            <param name="fname2" value="inputYZ.txt" />
+            <param name="path2" value="0" />
+          </paramlist>
+        </User>
+      </schematic>
+      <references />
+    </Definition>
+    <Definition classid="RowDefn" name="T5_8" group="" url="" version="RowDefn" build="RowDefn" crc="119841050" key="" view="false" date="1408552989">
+      <paramlist name="">
+        <param name="Description" value="" />
+        <param name="type" value="TLine" />
+      </paramlist>
+      <schematic classid="RowCanvas">
+        <paramlist>
+          <param name="show_grid" value="0" />
+          <param name="size" value="0" />
+          <param name="orient" value="1" />
+          <param name="show_border" value="0" />
+        </paramlist>
+        <paramlist>
+          <param name="show_grid" value="0" />
+          <param name="size" value="0" />
+          <param name="orient" value="1" />
+          <param name="show_border" value="0" />
+        </paramlist>
+        <User classid="UserCmp" defn="master:Line_Berg_Options" id="1154509329" x="576" y="180" w="452" h="148" z="0" orient="0" link="-1" layer="" q="4">
+          <paramlist link="-1" name="">
+            <param name="BDamp" value="0" />
+            <param name="Interp1" value="1" />
+            <param name="F1" value="2000 [Hz]" />
+            <param name="TZ" value="0.005 [ms]" />
+            <param name="TP" value="0.005 [ms]" />
+            <param name="Inflen" value="0" />
+          </paramlist>
+        </User>
+        <User classid="UserCmp" defn="master:Line_ManualYZ" id="862265274" x="576" y="342" w="452" h="218" z="0" orient="0" link="-1" layer="" q="4">
+          <paramlist link="-1" name="">
+            <param name="NCond" value="3" />
+            <param name="PU" value="3" />
+            <param name="Estim" value="1" />
+            <param name="REst" value="10.15" />
+            <param name="ZEst" value="1.915" />
+            <param name="TEst" value="1.36" />
+            <param name="LONGLN" value="0" />
+            <param name="VR" value="230 [kV]" />
+            <param name="MVA" value="100 [MVA]" />
+            <param name="RPUP" value="6.76e-8 [pu/m]" />
+            <param name="XLPUP" value="9.6e-7 [pu/m]" />
+            <param name="XCPUP" value="5.78e5 [pu*m]" />
+            <param name="RPUZ" value="6.86e-7 [pu/m]" />
+            <param name="XLPUZ" value="2.5e-6 [pu/m]" />
+            <param name="XCPUZ" value="8.14e5 [pu*m]" />
+            <param name="RPUZM" value="5.35e-7 [pu/m]" />
+            <param name="XLPUZM" value="6.37e-7 [pu/m]" />
+            <param name="XCPUZM" value="5.4e7 [pu*m]" />
+            <param name="RP" value="3.576e-5 [ohm/m]" />
+            <param name="XLP" value="5.078e-4 [ohm/m]" />
+            <param name="XCP" value="305.8 [Mohm*m]" />
+            <param name="RZ" value="3.63e-4 [ohm/m]" />
+            <param name="XLZ" value="1.323e-3 [ohm/m]" />
+            <param name="XCZ" value="430.6 [Mohm*m]" />
+            <param name="RZM" value="2.83e-4 [ohm/m]" />
+            <param name="XLZM" value="3.37e-4 [ohm/m]" />
+            <param name="XCZM" value="28560.0 [Mohm*m]" />
+            <param name="RTP" value="3.576e-5 [ohm/m]" />
+            <param name="TTP" value="3.4185e-9 [s/m]" />
+            <param name="ZTP" value="394.06 [ohm]" />
+            <param name="RTZ" value="3.63e-4 [ohm/m]" />
+            <param name="TTZ" value="4.65e-9 [s/m]" />
+            <param name="ZTZ" value="754.77 [ohm]" />
+            <param name="RTZM" value="2.83e-4 [ohm/m]" />
+            <param name="TTZM" value="0.288e-9 [s/m]" />
+            <param name="ZTZM" value="3102.4 [ohm]" />
+            <param name="VR2" value="230 [kV]" />
+            <param name="MVA2" value="100 [MVA]" />
+            <param name="RPUP2" value="0.032 [pu/m]" />
+            <param name="XLPUP2" value="0.161 [pu/m]" />
+            <param name="BPUP2" value="0.306 [pu/m]" />
+            <param name="RPUZ2" value="6.86e-7 [pu/m]" />
+            <param name="XLPUZ2" value="2.5e-6 [pu/m]" />
+            <param name="BPUZ2" value="1.23e-6 [pu/m]" />
+            <param name="RPUZM2" value="5.35e-7 [pu/m]" />
+            <param name="XLPUZM2" value="6.37e-7 [pu/m]" />
+            <param name="BPUZM2" value="1.85e-8 [pu/m]" />
+            <param name="fname" value="inputYZ.txt" />
+            <param name="path" value="0" />
+            <param name="dformat" value="0" />
+            <param name="fname2" value="inputYZ.txt" />
+            <param name="path2" value="0" />
+          </paramlist>
+        </User>
+      </schematic>
+      <references />
+    </Definition>
+    <Definition classid="RowDefn" name="T4_8" group="" url="" version="RowDefn" build="RowDefn" crc="102214542" key="" view="false" date="1408552989">
+      <paramlist name="">
+        <param name="Description" value="" />
+        <param name="type" value="TLine" />
+      </paramlist>
+      <schematic classid="RowCanvas">
+        <paramlist>
+          <param name="show_grid" value="0" />
+          <param name="size" value="0" />
+          <param name="orient" value="1" />
+          <param name="show_border" value="0" />
+        </paramlist>
+        <paramlist>
+          <param name="show_grid" value="0" />
+          <param name="size" value="0" />
+          <param name="orient" value="1" />
+          <param name="show_border" value="0" />
+        </paramlist>
+        <User classid="UserCmp" defn="master:Line_Berg_Options" id="1820233824" x="594" y="180" w="452" h="148" z="0" orient="0" link="-1" layer="" q="4">
+          <paramlist link="-1" name="">
+            <param name="BDamp" value="0" />
+            <param name="Interp1" value="1" />
+            <param name="F1" value="2000 [Hz]" />
+            <param name="TZ" value="0.005 [ms]" />
+            <param name="TP" value="0.005 [ms]" />
+            <param name="Inflen" value="0" />
+          </paramlist>
+        </User>
+        <User classid="UserCmp" defn="master:Line_ManualYZ" id="1610270113" x="594" y="342" w="452" h="218" z="0" orient="0" link="-1" layer="" q="4">
+          <paramlist link="-1" name="">
+            <param name="NCond" value="3" />
+            <param name="PU" value="3" />
+            <param name="Estim" value="1" />
+            <param name="REst" value="10.15" />
+            <param name="ZEst" value="1.915" />
+            <param name="TEst" value="1.36" />
+            <param name="LONGLN" value="0" />
+            <param name="VR" value="230 [kV]" />
+            <param name="MVA" value="100 [MVA]" />
+            <param name="RPUP" value="6.76e-8 [pu/m]" />
+            <param name="XLPUP" value="9.6e-7 [pu/m]" />
+            <param name="XCPUP" value="5.78e5 [pu*m]" />
+            <param name="RPUZ" value="6.86e-7 [pu/m]" />
+            <param name="XLPUZ" value="2.5e-6 [pu/m]" />
+            <param name="XCPUZ" value="8.14e5 [pu*m]" />
+            <param name="RPUZM" value="5.35e-7 [pu/m]" />
+            <param name="XLPUZM" value="6.37e-7 [pu/m]" />
+            <param name="XCPUZM" value="5.4e7 [pu*m]" />
+            <param name="RP" value="3.576e-5 [ohm/m]" />
+            <param name="XLP" value="5.078e-4 [ohm/m]" />
+            <param name="XCP" value="305.8 [Mohm*m]" />
+            <param name="RZ" value="3.63e-4 [ohm/m]" />
+            <param name="XLZ" value="1.323e-3 [ohm/m]" />
+            <param name="XCZ" value="430.6 [Mohm*m]" />
+            <param name="RZM" value="2.83e-4 [ohm/m]" />
+            <param name="XLZM" value="3.37e-4 [ohm/m]" />
+            <param name="XCZM" value="28560.0 [Mohm*m]" />
+            <param name="RTP" value="3.576e-5 [ohm/m]" />
+            <param name="TTP" value="3.4185e-9 [s/m]" />
+            <param name="ZTP" value="394.06 [ohm]" />
+            <param name="RTZ" value="3.63e-4 [ohm/m]" />
+            <param name="TTZ" value="4.65e-9 [s/m]" />
+            <param name="ZTZ" value="754.77 [ohm]" />
+            <param name="RTZM" value="2.83e-4 [ohm/m]" />
+            <param name="TTZM" value="0.288e-9 [s/m]" />
+            <param name="ZTZM" value="3102.4 [ohm]" />
+            <param name="VR2" value="230 [kV]" />
+            <param name="MVA2" value="100 [MVA]" />
+            <param name="RPUP2" value="0.017 [pu/m]" />
+            <param name="XLPUP2" value="0.092 [pu/m]" />
+            <param name="BPUP2" value="0.158 [pu/m]" />
+            <param name="RPUZ2" value="6.86e-7 [pu/m]" />
+            <param name="XLPUZ2" value="2.5e-6 [pu/m]" />
+            <param name="BPUZ2" value="1.23e-6 [pu/m]" />
+            <param name="RPUZM2" value="5.35e-7 [pu/m]" />
+            <param name="XLPUZM2" value="6.37e-7 [pu/m]" />
+            <param name="BPUZM2" value="1.85e-8 [pu/m]" />
+            <param name="fname" value="inputYZ.txt" />
+            <param name="path" value="0" />
+            <param name="dformat" value="0" />
+            <param name="fname2" value="inputYZ.txt" />
+            <param name="path2" value="0" />
+          </paramlist>
+        </User>
+      </schematic>
+      <references />
+    </Definition>
+    <Definition classid="RowDefn" name="T4_7" group="" url="" version="RowDefn" build="RowDefn" crc="56953691" key="" view="false" date="1408552989">
+      <paramlist name="">
+        <param name="Description" value="" />
+        <param name="type" value="TLine" />
+      </paramlist>
+      <schematic classid="RowCanvas">
+        <paramlist>
+          <param name="show_grid" value="0" />
+          <param name="size" value="0" />
+          <param name="orient" value="1" />
+          <param name="show_border" value="0" />
+        </paramlist>
+        <paramlist>
+          <param name="show_grid" value="0" />
+          <param name="size" value="0" />
+          <param name="orient" value="1" />
+          <param name="show_border" value="0" />
+        </paramlist>
+        <User classid="UserCmp" defn="master:Line_Berg_Options" id="297089287" x="576" y="180" w="452" h="148" z="0" orient="0" link="-1" layer="" q="4">
+          <paramlist link="-1" name="">
+            <param name="BDamp" value="0" />
+            <param name="Interp1" value="1" />
+            <param name="F1" value="2000 [Hz]" />
+            <param name="TZ" value="0.005 [ms]" />
+            <param name="TP" value="0.005 [ms]" />
+            <param name="Inflen" value="0" />
+          </paramlist>
+        </User>
+        <User classid="UserCmp" defn="master:Line_ManualYZ" id="1407593834" x="576" y="342" w="452" h="218" z="0" orient="0" link="-1" layer="" q="4">
+          <paramlist link="-1" name="">
+            <param name="NCond" value="3" />
+            <param name="PU" value="3" />
+            <param name="Estim" value="1" />
+            <param name="REst" value="10.15" />
+            <param name="ZEst" value="1.915" />
+            <param name="TEst" value="1.36" />
+            <param name="LONGLN" value="0" />
+            <param name="VR" value="230 [kV]" />
+            <param name="MVA" value="100 [MVA]" />
+            <param name="RPUP" value="6.76e-8 [pu/m]" />
+            <param name="XLPUP" value="9.6e-7 [pu/m]" />
+            <param name="XCPUP" value="5.78e5 [pu*m]" />
+            <param name="RPUZ" value="6.86e-7 [pu/m]" />
+            <param name="XLPUZ" value="2.5e-6 [pu/m]" />
+            <param name="XCPUZ" value="8.14e5 [pu*m]" />
+            <param name="RPUZM" value="5.35e-7 [pu/m]" />
+            <param name="XLPUZM" value="6.37e-7 [pu/m]" />
+            <param name="XCPUZM" value="5.4e7 [pu*m]" />
+            <param name="RP" value="3.576e-5 [ohm/m]" />
+            <param name="XLP" value="5.078e-4 [ohm/m]" />
+            <param name="XCP" value="305.8 [Mohm*m]" />
+            <param name="RZ" value="3.63e-4 [ohm/m]" />
+            <param name="XLZ" value="1.323e-3 [ohm/m]" />
+            <param name="XCZ" value="430.6 [Mohm*m]" />
+            <param name="RZM" value="2.83e-4 [ohm/m]" />
+            <param name="XLZM" value="3.37e-4 [ohm/m]" />
+            <param name="XCZM" value="28560.0 [Mohm*m]" />
+            <param name="RTP" value="3.576e-5 [ohm/m]" />
+            <param name="TTP" value="3.4185e-9 [s/m]" />
+            <param name="ZTP" value="394.06 [ohm]" />
+            <param name="RTZ" value="3.63e-4 [ohm/m]" />
+            <param name="TTZ" value="4.65e-9 [s/m]" />
+            <param name="ZTZ" value="754.77 [ohm]" />
+            <param name="RTZM" value="2.83e-4 [ohm/m]" />
+            <param name="TTZM" value="0.288e-9 [s/m]" />
+            <param name="ZTZM" value="3102.4 [ohm]" />
+            <param name="VR2" value="230 [kV]" />
+            <param name="MVA2" value="100 [MVA]" />
+            <param name="RPUP2" value="0.010 [pu/m]" />
+            <param name="XLPUP2" value="0.068 [pu/m]" />
+            <param name="BPUP2" value="0.176 [pu/m]" />
+            <param name="RPUZ2" value="6.86e-7 [pu/m]" />
+            <param name="XLPUZ2" value="2.5e-6 [pu/m]" />
+            <param name="BPUZ2" value="1.23e-6 [pu/m]" />
+            <param name="RPUZM2" value="5.35e-7 [pu/m]" />
+            <param name="XLPUZM2" value="6.37e-7 [pu/m]" />
+            <param name="BPUZM2" value="1.85e-8 [pu/m]" />
+            <param name="fname" value="inputYZ.txt" />
+            <param name="path" value="0" />
+            <param name="dformat" value="0" />
+            <param name="fname2" value="inputYZ.txt" />
+            <param name="path2" value="0" />
+          </paramlist>
+        </User>
+      </schematic>
+      <references />
+    </Definition>
+    <Definition classid="UserCmpDefn" name="T8_9" group="" url="" version="" build="" crc="83161319" instances="1" key="" view="false" date="1408552981">
+      <paramlist name="">
+        <param name="Description" value="" />
+      </paramlist>
+      <form name="" w="320" h="400" splitter="60">
+        <category name="Configuration">
+          <cond />
+          <parameter desc="Name" name="Name" group="" type="Text">
+            <value />
+            <cond />
+          </parameter>
+        </category>
+      </form>
+      <svg viewBox="-200 -200 200 200">
+        <paramlist>
+          <param name="show_grid" value="0" />
+          <param name="size" value="0" />
+          <param name="orient" value="1" />
+          <param name="show_border" value="0" />
+        </paramlist>
+        <port model="Natural" name="in" x="-36" y="0" dim="3" mode="Electrical" type="NonRemovable" internal="false"><![CDATA[true]]></port>
+        <port model="Natural" name="out" x="36" y="0" dim="3" mode="Electrical" type="NonRemovable" internal="false"><![CDATA[true]]></port>
+        <cond><![CDATA[true]]></cond>
+        <rect x="-18" y="-3" width="36" height="6" stroke="black" stroke-width="0.2" stroke-dasharray="none" fill-style="Solid" fill-fg="black" fill-bg="black" />
+        <line x1="-36" y1="0" x2="36" y2="0" stroke="Black" stroke-dasharray="none" stroke-width="0.2" port="" />
+        <text x="-1" y="-8" stroke="Black" font-size="Small" text-anchor="Middle"><![CDATA[T8_9]]></text>
+      </svg>
+      <schematic classid="UserCanvas" zoomlevel="6" scrollx="0" scrolly="0">
+        <paramlist>
+          <param name="show_grid" value="0" />
+          <param name="size" value="0" />
+          <param name="orient" value="1" />
+          <param name="show_border" value="0" />
+          <param name="monitor_bus_voltage" value="0" />
+          <param name="show_signal" value="0" />
+          <param name="show_virtual" value="0" />
+          <param name="show_sequence" value="0" />
+          <param name="auto_sequence" value="1" />
+        </paramlist>
+        <User classid="UserCmp" name="master:xnode" id="233478269" x="288" y="126" w="16" h="30" z="1" orient="0" defn="master:xnode" link="-1" layer="" q="4">
+          <paramlist link="-1" name="">
+            <param name="Name" value="in" />
+          </paramlist>
+        </User>
+        <User classid="UserCmp" name="master:xnode" id="1448201151" x="486" y="126" w="18" h="30" z="1" orient="0" defn="master:xnode" link="-1" layer="" q="4">
+          <paramlist link="-1" name="">
+            <param name="Name" value="out" />
+          </paramlist>
+        </User>
+        <Wire classid="WireOrthogonal" id="973671355" name="" x="288" y="126" w="44" h="8" orient="0" layer="">
+          <vertex x="0" y="0" />
+          <vertex x="36" y="0" />
+        </Wire>
+        <Wire classid="WireOrthogonal" id="1828603989" name="" x="432" y="126" w="62" h="8" orient="0" layer="">
+          <vertex x="0" y="0" />
+          <vertex x="54" y="0" />
+        </Wire>
+        <Wire classid="TLine" id="1354660837" name="New_IEEE_09_CT:TLine_2" x="324" y="126" w="116" h="44" orient="0" defn="New_IEEE_09_CT:TLine_2" recv="-1" send="-1" back="-1" layer="">
+          <User classid="UserCmp" name="New_IEEE_09_CT:TLine_2" id="1354660837" x="0" y="0" w="0" h="0" z="-1" orient="0" defn="New_IEEE_09_CT:TLine_2" link="1354660837" layer="" q="4">
+            <paramlist link="-1" name="">
+              <param name="Name" value="T8_9" />
+              <param name="Freq" value="60.0 [Hz]" />
+              <param name="Length" value="0.001 [km]" />
+              <param name="Dim" value="3" />
+              <param name="Mode" value="1" />
+              <param name="cct_overlayed" value="0" />
+              <param name="CoupleEnab" value="0" />
+              <param name="CoupleName" value="row" />
+              <param name="CoupleOffset" value="0.0 [m]" />
+              <param name="CoupleRef" value="0" />
+              <param name="ManEnab" value="0" />
+              <param name="DataFormat" value="0" />
+              <param name="VR" value="230.0 [kV]" />
+              <param name="MVA" value="100.0 [MVA]" />
+              <param name="r0mpu" value="dim (10,10)">
+                <row><![CDATA[-1,-1,-1,-1,-1,-1,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,-1,-1,-1,-1,-1,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,-1,-1,-1,-1,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,0,-1,-1,-1,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,0,0,-1,-1,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,0,0,0,-1,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,0,0,0,0,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,0,0,0,0,0,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,0,0,0,0,0,0,-1,-1]]></row>
+                <row><![CDATA[0,0,0,0,0,0,0,0,0,-1]]></row>
+              </param>
+              <param name="r0m" value="dim (10,10)">
+                <row><![CDATA[-1,-1,-1,-1,-1,-1,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,-1,-1,-1,-1,-1,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,-1,-1,-1,-1,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,0,-1,-1,-1,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,0,0,-1,-1,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,0,0,0,-1,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,0,0,0,0,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,0,0,0,0,0,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,0,0,0,0,0,0,-1,-1]]></row>
+                <row><![CDATA[0,0,0,0,0,0,0,0,0,-1]]></row>
+              </param>
+              <param name="xl0mpu" value="dim (10,10)">
+                <row><![CDATA[-1,-1,-1,-1,-1,-1,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,-1,-1,-1,-1,-1,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,-1,-1,-1,-1,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,0,-1,-1,-1,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,0,0,-1,-1,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,0,0,0,-1,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,0,0,0,0,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,0,0,0,0,0,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,0,0,0,0,0,0,-1,-1]]></row>
+                <row><![CDATA[0,0,0,0,0,0,0,0,0,-1]]></row>
+              </param>
+              <param name="xl0m" value="dim (10,10)">
+                <row><![CDATA[-1,-1,-1,-1,-1,-1,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,-1,-1,-1,-1,-1,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,-1,-1,-1,-1,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,0,-1,-1,-1,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,0,0,-1,-1,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,0,0,0,-1,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,0,0,0,0,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,0,0,0,0,0,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,0,0,0,0,0,0,-1,-1]]></row>
+                <row><![CDATA[0,0,0,0,0,0,0,0,0,-1]]></row>
+              </param>
+              <param name="xc0mpu" value="dim (10,10)">
+                <row><![CDATA[-1,-1,-1,-1,-1,-1,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,-1,-1,-1,-1,-1,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,-1,-1,-1,-1,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,0,-1,-1,-1,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,0,0,-1,-1,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,0,0,0,-1,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,0,0,0,0,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,0,0,0,0,0,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,0,0,0,0,0,0,-1,-1]]></row>
+                <row><![CDATA[0,0,0,0,0,0,0,0,0,-1]]></row>
+              </param>
+              <param name="xc0m" value="dim (10,10)">
+                <row><![CDATA[-1,-1,-1,-1,-1,-1,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,-1,-1,-1,-1,-1,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,-1,-1,-1,-1,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,0,-1,-1,-1,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,0,0,-1,-1,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,0,0,0,-1,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,0,0,0,0,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,0,0,0,0,0,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,0,0,0,0,0,0,-1,-1]]></row>
+                <row><![CDATA[0,0,0,0,0,0,0,0,0,-1]]></row>
+              </param>
+              <param name="bc0mpu" value="dim (10,10)">
+                <row><![CDATA[-1,-1,-1,-1,-1,-1,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,-1,-1,-1,-1,-1,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,-1,-1,-1,-1,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,0,-1,-1,-1,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,0,0,-1,-1,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,0,0,0,-1,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,0,0,0,0,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,0,0,0,0,0,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,0,0,0,0,0,0,-1,-1]]></row>
+                <row><![CDATA[0,0,0,0,0,0,0,0,0,-1]]></row>
+              </param>
+              <param name="tt0m" value="dim (10,10)">
+                <row><![CDATA[-1,-1,-1,-1,-1,-1,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,-1,-1,-1,-1,-1,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,-1,-1,-1,-1,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,0,-1,-1,-1,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,0,0,-1,-1,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,0,0,0,-1,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,0,0,0,0,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,0,0,0,0,0,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,0,0,0,0,0,0,-1,-1]]></row>
+                <row><![CDATA[0,0,0,0,0,0,0,0,0,-1]]></row>
+              </param>
+              <param name="zs0m" value="dim (10,10)">
+                <row><![CDATA[-1,-1,-1,-1,-1,-1,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,-1,-1,-1,-1,-1,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,-1,-1,-1,-1,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,0,-1,-1,-1,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,0,0,-1,-1,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,0,0,0,-1,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,0,0,0,0,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,0,0,0,0,0,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,0,0,0,0,0,0,-1,-1]]></row>
+                <row><![CDATA[0,0,0,0,0,0,0,0,0,-1]]></row>
+              </param>
+              <param name="Date" value="-1" />
+            </paramlist>
+          </User>
+          <vertex x="0" y="0" />
+          <vertex x="0" y="18" />
+          <vertex x="108" y="-18" />
+          <vertex x="108" y="0" />
+        </Wire>
+      </schematic>
+      <references>
+        <using namespace="master" />
+      </references>
+    </Definition>
+    <Definition classid="UserCmpDefn" name="T7_8" group="" url="" version="" build="" crc="111293612" instances="1" key="" view="false" date="1408552981">
+      <paramlist name="">
+        <param name="Description" value="" />
+      </paramlist>
+      <form name="" w="320" h="400" splitter="60">
+        <category name="Configuration">
+          <cond />
+          <parameter desc="Name" name="Name" group="" type="Text">
+            <value />
+            <cond />
+          </parameter>
+        </category>
+      </form>
+      <svg viewBox="-200 -200 200 200">
+        <paramlist>
+          <param name="show_grid" value="0" />
+          <param name="size" value="0" />
+          <param name="orient" value="1" />
+          <param name="show_border" value="0" />
+        </paramlist>
+        <port model="Natural" name="in" x="-36" y="0" dim="3" mode="Electrical" type="NonRemovable" internal="false"><![CDATA[true]]></port>
+        <port model="Natural" name="out" x="36" y="0" dim="3" mode="Electrical" type="NonRemovable" internal="false"><![CDATA[true]]></port>
+        <cond><![CDATA[true]]></cond>
+        <rect x="-18" y="-3" width="36" height="6" stroke="black" stroke-width="0.2" stroke-dasharray="none" fill-style="Solid" fill-fg="black" fill-bg="black" />
+        <line x1="-36" y1="0" x2="36" y2="0" stroke="Black" stroke-dasharray="none" stroke-width="0.2" port="" />
+        <text x="-1" y="-8" stroke="Black" font-size="Small" text-anchor="Middle"><![CDATA[T7_8]]></text>
+      </svg>
+      <schematic classid="UserCanvas" zoomlevel="6" scrollx="0" scrolly="0">
+        <paramlist>
+          <param name="show_grid" value="0" />
+          <param name="size" value="0" />
+          <param name="orient" value="1" />
+          <param name="show_border" value="0" />
+          <param name="monitor_bus_voltage" value="0" />
+          <param name="show_signal" value="0" />
+          <param name="show_virtual" value="0" />
+          <param name="show_sequence" value="0" />
+          <param name="auto_sequence" value="1" />
+        </paramlist>
+        <User classid="UserCmp" name="master:xnode" id="1350587270" x="522" y="288" w="16" h="30" z="1" orient="0" defn="master:xnode" link="-1" layer="" q="4">
+          <paramlist link="-1" name="">
+            <param name="Name" value="in" />
+          </paramlist>
+        </User>
+        <User classid="UserCmp" name="master:xnode" id="1957834793" x="720" y="288" w="18" h="30" z="1" orient="0" defn="master:xnode" link="-1" layer="" q="4">
+          <paramlist link="-1" name="">
+            <param name="Name" value="out" />
+          </paramlist>
+        </User>
+        <Wire classid="WireOrthogonal" id="514679803" name="" x="522" y="288" w="44" h="8" orient="0" layer="">
+          <vertex x="0" y="0" />
+          <vertex x="36" y="0" />
+        </Wire>
+        <Wire classid="WireOrthogonal" id="1213375244" name="" x="666" y="288" w="62" h="8" orient="0" layer="">
+          <vertex x="0" y="0" />
+          <vertex x="54" y="0" />
+        </Wire>
+        <Wire classid="TLine" id="392134517" name="New_IEEE_09_CT:TLine_1" x="558" y="288" w="116" h="44" orient="0" defn="New_IEEE_09_CT:TLine_1" recv="-1" send="-1" back="-1" layer="">
+          <User classid="UserCmp" name="New_IEEE_09_CT:TLine_1" id="392134517" x="0" y="0" w="0" h="0" z="-1" orient="0" defn="New_IEEE_09_CT:TLine_1" link="392134517" layer="" q="4">
+            <paramlist link="-1" name="">
+              <param name="Name" value="T7_8" />
+              <param name="Freq" value="60.0 [Hz]" />
+              <param name="Length" value="0.001 [km]" />
+              <param name="Dim" value="3" />
+              <param name="Mode" value="1" />
+              <param name="cct_overlayed" value="0" />
+              <param name="CoupleEnab" value="0" />
+              <param name="CoupleName" value="row" />
+              <param name="CoupleOffset" value="0.0 [m]" />
+              <param name="CoupleRef" value="0" />
+              <param name="ManEnab" value="0" />
+              <param name="DataFormat" value="0" />
+              <param name="VR" value="230.0 [kV]" />
+              <param name="MVA" value="100.0 [MVA]" />
+              <param name="r0mpu" value="dim (10,10)">
+                <row><![CDATA[-1,-1,-1,-1,-1,-1,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,-1,-1,-1,-1,-1,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,-1,-1,-1,-1,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,0,-1,-1,-1,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,0,0,-1,-1,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,0,0,0,-1,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,0,0,0,0,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,0,0,0,0,0,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,0,0,0,0,0,0,-1,-1]]></row>
+                <row><![CDATA[0,0,0,0,0,0,0,0,0,-1]]></row>
+              </param>
+              <param name="r0m" value="dim (10,10)">
+                <row><![CDATA[-1,-1,-1,-1,-1,-1,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,-1,-1,-1,-1,-1,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,-1,-1,-1,-1,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,0,-1,-1,-1,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,0,0,-1,-1,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,0,0,0,-1,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,0,0,0,0,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,0,0,0,0,0,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,0,0,0,0,0,0,-1,-1]]></row>
+                <row><![CDATA[0,0,0,0,0,0,0,0,0,-1]]></row>
+              </param>
+              <param name="xl0mpu" value="dim (10,10)">
+                <row><![CDATA[-1,-1,-1,-1,-1,-1,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,-1,-1,-1,-1,-1,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,-1,-1,-1,-1,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,0,-1,-1,-1,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,0,0,-1,-1,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,0,0,0,-1,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,0,0,0,0,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,0,0,0,0,0,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,0,0,0,0,0,0,-1,-1]]></row>
+                <row><![CDATA[0,0,0,0,0,0,0,0,0,-1]]></row>
+              </param>
+              <param name="xl0m" value="dim (10,10)">
+                <row><![CDATA[-1,-1,-1,-1,-1,-1,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,-1,-1,-1,-1,-1,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,-1,-1,-1,-1,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,0,-1,-1,-1,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,0,0,-1,-1,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,0,0,0,-1,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,0,0,0,0,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,0,0,0,0,0,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,0,0,0,0,0,0,-1,-1]]></row>
+                <row><![CDATA[0,0,0,0,0,0,0,0,0,-1]]></row>
+              </param>
+              <param name="xc0mpu" value="dim (10,10)">
+                <row><![CDATA[-1,-1,-1,-1,-1,-1,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,-1,-1,-1,-1,-1,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,-1,-1,-1,-1,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,0,-1,-1,-1,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,0,0,-1,-1,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,0,0,0,-1,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,0,0,0,0,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,0,0,0,0,0,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,0,0,0,0,0,0,-1,-1]]></row>
+                <row><![CDATA[0,0,0,0,0,0,0,0,0,-1]]></row>
+              </param>
+              <param name="xc0m" value="dim (10,10)">
+                <row><![CDATA[-1,-1,-1,-1,-1,-1,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,-1,-1,-1,-1,-1,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,-1,-1,-1,-1,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,0,-1,-1,-1,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,0,0,-1,-1,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,0,0,0,-1,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,0,0,0,0,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,0,0,0,0,0,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,0,0,0,0,0,0,-1,-1]]></row>
+                <row><![CDATA[0,0,0,0,0,0,0,0,0,-1]]></row>
+              </param>
+              <param name="bc0mpu" value="dim (10,10)">
+                <row><![CDATA[-1,-1,-1,-1,-1,-1,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,-1,-1,-1,-1,-1,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,-1,-1,-1,-1,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,0,-1,-1,-1,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,0,0,-1,-1,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,0,0,0,-1,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,0,0,0,0,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,0,0,0,0,0,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,0,0,0,0,0,0,-1,-1]]></row>
+                <row><![CDATA[0,0,0,0,0,0,0,0,0,-1]]></row>
+              </param>
+              <param name="tt0m" value="dim (10,10)">
+                <row><![CDATA[-1,-1,-1,-1,-1,-1,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,-1,-1,-1,-1,-1,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,-1,-1,-1,-1,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,0,-1,-1,-1,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,0,0,-1,-1,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,0,0,0,-1,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,0,0,0,0,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,0,0,0,0,0,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,0,0,0,0,0,0,-1,-1]]></row>
+                <row><![CDATA[0,0,0,0,0,0,0,0,0,-1]]></row>
+              </param>
+              <param name="zs0m" value="dim (10,10)">
+                <row><![CDATA[-1,-1,-1,-1,-1,-1,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,-1,-1,-1,-1,-1,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,-1,-1,-1,-1,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,0,-1,-1,-1,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,0,0,-1,-1,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,0,0,0,-1,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,0,0,0,0,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,0,0,0,0,0,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,0,0,0,0,0,0,-1,-1]]></row>
+                <row><![CDATA[0,0,0,0,0,0,0,0,0,-1]]></row>
+              </param>
+              <param name="Date" value="-1" />
+            </paramlist>
+          </User>
+          <vertex x="0" y="0" />
+          <vertex x="0" y="18" />
+          <vertex x="108" y="-18" />
+          <vertex x="108" y="0" />
+        </Wire>
+      </schematic>
+      <references>
+        <using namespace="master" />
+      </references>
+    </Definition>
+    <Definition classid="UserCmpDefn" name="psse" group="" url="" version="" build="" crc="55785303" instances="1" key="" view="false" date="1408552981">
+      <paramlist name="">
+        <param name="Description" value="" />
+      </paramlist>
+      <form name="" w="320" h="400" splitter="60">
+        <category name="Configuration">
+          <cond />
+          <parameter desc="Name" name="Name" group="" type="Text">
+            <value />
+            <cond />
+          </parameter>
+        </category>
+      </form>
+      <svg viewBox="-200 -200 200 200">
+        <paramlist>
+          <param name="show_grid" value="0" />
+          <param name="size" value="0" />
+          <param name="orient" value="1" />
+          <param name="show_border" value="0" />
+        </paramlist>
+        <cond><![CDATA[true]]></cond>
+        <rect x="-39" y="-39" width="78" height="78" stroke="black" stroke-width="0.2" stroke-dasharray="none" fill-style="Hollow" fill-fg="black" fill-bg="black" />
+        <text x="0" y="-13" stroke="Black" font-size="Small" text-anchor="Middle"><![CDATA[PSS/E]]></text>
+        <text x="0" y="17" stroke="Black" font-size="Small" text-anchor="Middle"><![CDATA[raw file]]></text>
+      </svg>
+      <schematic classid="UserCanvas" zoomlevel="6" scrollx="0" scrolly="0">
+        <paramlist>
+          <param name="show_grid" value="0" />
+          <param name="size" value="4" />
+          <param name="orient" value="1" />
+          <param name="show_border" value="0" />
+          <param name="monitor_bus_voltage" value="0" />
+          <param name="show_signal" value="0" />
+          <param name="show_virtual" value="0" />
+          <param name="show_sequence" value="0" />
+          <param name="auto_sequence" value="1" />
+          <param name="virtual_filter" value="" />
+        </paramlist>
+        <Sticky classid="Sticky" id="1710059549" x="0" y="0" w="1134" h="882" colors="0, 15792890" layer="">
+          <paramlist>
+            <param name="font" value="1" />
+            <param name="align" value="0" />
+            <param name="style" value="1" />
+            <param name="fg_color" value="0" />
+            <param name="bg_color" value="16777215" />
+            <param name="arrows" value="0" />
+          </paramlist><![CDATA[  0,    100.00, 33, 0, 0, 60.00       / October 01, 2013 15:59:49
+
+
+    1,'Bus1        ',  16.5000,3,   1,   1,   1,1.04000,   0.0000
+    2,'Bus 2       ',  18.0000,2,   1,   1,   1,1.02500,   9.3507
+    3,'Bus 3       ',  13.8000,2,   1,   1,   1,1.02500,   5.1420
+    4,'Bus 4       ', 230.0000,1,   1,   1,   1,1.02531,  -2.2174
+    5,'Bus 5       ', 230.0000,1,   1,   1,   1,0.99972,  -3.6802
+    6,'Bus 6       ', 230.0000,1,   1,   1,   1,1.01225,  -3.5666
+    7,'Bus 7       ', 230.0000,1,   1,   1,   1,1.02683,   3.7961
+    8,'Bus 8       ', 230.0000,1,   1,   1,   1,1.01727,   1.3373
+    9,'Bus 9       ', 230.0000,1,   1,   1,   1,1.03269,   2.4448
+0 / END OF BUS DATA, BEGIN LOAD DATA
+    5,'1 ',1,   1,   1,   125.000,    50.000,     0.000,     0.000,     0.000,    -0.000,   1,1
+    6,'1 ',1,   1,   1,    90.000,    30.000,     0.000,     0.000,     0.000,    -0.000,   1,1
+    8,'1 ',1,   1,   1,   100.000,    35.000,     0.000,     0.000,     0.000,    -0.000,   1,1
+0 / END OF LOAD DATA, BEGIN FIXED SHUNT DATA
+0 / END OF FIXED SHUNT DATA, BEGIN GENERATOR DATA
+    1,'1 ',    71.627,    27.915,  9900.000, -9900.000,1.04000,    0,   500.000,   0.00000,   1.00000,   0.00000,   0.00000,1.00000,1,  100.0,   450.000,     0.000,   1,1.0000,   0,1.0000,   0,1.0000,   0,1.0000,0, 1.0000
+    2,'1 ',   163.000,     4.903,  9900.000, -9900.000,1.02500,    0,   250.000,   0.00000,   1.00000,   0.00000,   0.00000,1.00000,1,  100.0,   240.000,     0.000,   1,1.0000,   0,1.0000,   0,1.0000,   0,1.0000,0, 1.0000
+    3,'1 ',    85.000,   -11.449,  9900.000, -9900.000,1.02500,    0,   100.000,   0.00000,   1.00000,   0.00000,   0.00000,1.00000,1,  100.0,    90.000,     0.000,   1,1.0000,   0,1.0000,   0,1.0000,   0,1.0000,0, 1.0000
+0 / END OF GENERATOR DATA, BEGIN BRANCH DATA
+    5,     4,'1 ', 0.01000, 0.06800,0.17600,   0.00,   0.00,   0.00,  0.00000,  0.00000,  0.00000,  0.00000,1,1,   0.0,   1,1.0000,   0,1.0000,   0,1.0000,   0,1.0000
+    6,     4,'1 ', 0.01700, 0.09200,0.15800,   0.00,   0.00,   0.00,  0.00000,  0.00000,  0.00000,  0.00000,1,1,   0.0,   1,1.0000,   0,1.0000,   0,1.0000,   0,1.0000
+    7,     5,'1 ', 0.03200, 0.16100,0.30600,   0.00,   0.00,   0.00,  0.00000,  0.00000,  0.00000,  0.00000,1,1,   0.0,   1,1.0000,   0,1.0000,   0,1.0000,   0,1.0000
+    9,     6,'1 ', 0.03900, 0.17380,0.35800,   0.00,   0.00,   0.00,  0.00000,  0.00000,  0.00000,  0.00000,1,1,   0.0,   1,1.0000,   0,1.0000,   0,1.0000,   0,1.0000
+    7,     8,'1 ', 0.00850, 0.05760,0.14900,   0.00,   0.00,   0.00,  0.00000,  0.00000,  0.00000,  0.00000,1,1,   0.0,   1,1.0000,   0,1.0000,   0,1.0000,   0,1.0000
+    8,     9,'1 ', 0.01190, 0.10080,0.20900,   0.00,   0.00,   0.00,  0.00000,  0.00000,  0.00000,  0.00000,1,1,   0.0,   1,1.0000,   0,1.0000,   0,1.0000,   0,1.0000
+0 / END OF BRANCH DATA, BEGIN TRANSFORMER DATA
+    4,    1,    0,'1 ',1,1,1,  0.00000,  0.00000,2,'        ',1,   1,1.0000,   0,1.0000,   0,1.0000,   0,1.0000
+ 0.00000, 0.05760, 100.00
+1.00000,  0.000,   0.000,   0.00,   0.00,   0.00,0,     0, 1.50000, 0.51000, 1.50000, 0.51000,159, 0, 0.00000, 0.00000
+1.00000,  0.000
+    2,    7,    0,'1 ',1,1,1,  0.00000,  0.00000,2,'        ',1,   1,1.0000,   0,1.0000,   0,1.0000,   0,1.0000
+ 0.00000, 0.06250, 100.00
+1.00000,  0.000,   0.000,   0.00,   0.00,   0.00,0,     2, 1.10000, 0.90000, 1.00000, 0.99000, 33, 0, 0.00000, 0.00000
+1.00000,  0.000
+    9,    3,    0,'1 ',1,1,1,  0.00000,  0.00000,2,'        ',1,   1,1.0000,   0,1.0000,   0,1.0000,   0,1.0000
+ 0.00000, 0.05860, 100.00
+1.00000,  0.000,   0.000,   0.00,   0.00,   0.00,0,     9, 1.10000, 0.90000, 1.00000, 0.99000, 33, 0, 0.00000, 0.00000
+1.00000,  0.000
+0 / END OF TRANSFORMER DATA, BEGIN AREA DATA
+   1,    0,     0.000,     1.000,'1           '
+0 / END OF AREA DATA, BEGIN TWO-TERMINAL DC DATA
+0 / END OF TWO-TERMINAL DC DATA, BEGIN VOLTAGE SOURCE CONVERTER DATA
+0 / END OF VOLTAGE SOURCE CONVERTER DATA, BEGIN IMPEDANCE CORRECTION DATA
+0 / END OF IMPEDANCE CORRECTION DATA, BEGIN MULTI-TERMINAL DC DATA
+0 / END OF MULTI-TERMINAL DC DATA, BEGIN MULTI-SECTION LINE DATA
+0 / END OF MULTI-SECTION LINE DATA, BEGIN ZONE DATA
+   1,'1       '
+0 / END OF ZONE DATA, BEGIN INTER-AREA TRANSFER DATA
+0 / END OF INTER-AREA TRANSFER DATA, BEGIN OWNER DATA
+    1,'1'
+0 / END OF OWNER DATA, BEGIN FACTS CONTROL DEVICE DATA
+0 / END OF FACTS CONTROL DEVICE DATA, BEGIN SWITCHED SHUNT DATA
+0 /END OF SWITCHED SHUNT DATA, BEGIN GNE DEVICE DATA
+0 /END OF GNE DEVICE DATA
+Q
+]]></Sticky>
+      </schematic>
+      <references />
+    </Definition>
+    <Definition classid="UserCmpDefn" name="T4_6" group="" url="" version="" build="" crc="93257488" instances="1" key="" view="false" date="1408552981">
+      <paramlist name="">
+        <param name="Description" value="" />
+      </paramlist>
+      <form name="" w="320" h="400" splitter="60">
+        <category name="Configuration">
+          <cond />
+          <parameter desc="Name" name="Name" group="" type="Text">
+            <value />
+            <cond />
+          </parameter>
+        </category>
+      </form>
+      <svg viewBox="-200 -200 200 200">
+        <paramlist>
+          <param name="show_grid" value="0" />
+          <param name="size" value="0" />
+          <param name="orient" value="1" />
+          <param name="show_border" value="0" />
+        </paramlist>
+        <port model="Natural" name="in" x="-36" y="0" dim="3" mode="Electrical" type="NonRemovable" internal="false"><![CDATA[true]]></port>
+        <port model="Natural" name="out" x="36" y="0" dim="3" mode="Electrical" type="NonRemovable" internal="false"><![CDATA[true]]></port>
+        <cond><![CDATA[true]]></cond>
+        <rect x="-18" y="-3" width="36" height="6" stroke="black" stroke-width="0.2" stroke-dasharray="none" fill-style="Solid" fill-fg="black" fill-bg="black" />
+        <line x1="-36" y1="0" x2="36" y2="0" stroke="Black" stroke-dasharray="none" stroke-width="0.2" port="" />
+        <text x="-1" y="-8" stroke="Black" font-size="Small" text-anchor="Middle"><![CDATA[T4_6]]></text>
+      </svg>
+      <schematic classid="UserCanvas" zoomlevel="6" scrollx="0" scrolly="0">
+        <paramlist>
+          <param name="show_grid" value="0" />
+          <param name="size" value="0" />
+          <param name="orient" value="1" />
+          <param name="show_border" value="0" />
+          <param name="monitor_bus_voltage" value="0" />
+          <param name="show_signal" value="0" />
+          <param name="show_virtual" value="0" />
+          <param name="show_sequence" value="0" />
+          <param name="auto_sequence" value="1" />
+        </paramlist>
+        <User classid="UserCmp" name="master:xnode" id="860303705" x="720" y="72" w="16" h="30" z="1" orient="0" defn="master:xnode" link="-1" layer="" q="4">
+          <paramlist link="-1" name="">
+            <param name="Name" value="in" />
+          </paramlist>
+        </User>
+        <User classid="UserCmp" name="master:xnode" id="686268540" x="918" y="72" w="18" h="30" z="1" orient="0" defn="master:xnode" link="-1" layer="" q="4">
+          <paramlist link="-1" name="">
+            <param name="Name" value="out" />
+          </paramlist>
+        </User>
+        <Wire classid="WireOrthogonal" id="366789813" name="" x="720" y="72" w="44" h="8" orient="0" layer="">
+          <vertex x="0" y="0" />
+          <vertex x="36" y="0" />
+        </Wire>
+        <Wire classid="WireOrthogonal" id="1966290052" name="" x="864" y="72" w="62" h="8" orient="0" layer="">
+          <vertex x="0" y="0" />
+          <vertex x="54" y="0" />
+        </Wire>
+        <Wire classid="TLine" id="1669850792" name="New_IEEE_09_CT:T4_8" x="756" y="72" w="116" h="44" orient="0" defn="New_IEEE_09_CT:T4_8" recv="-1" send="-1" back="-1" layer="">
+          <User classid="UserCmp" name="New_IEEE_09_CT:T4_8" id="1669850792" x="0" y="0" w="0" h="0" z="-1" orient="0" defn="New_IEEE_09_CT:T4_8" link="1669850792" layer="" q="4">
+            <paramlist link="-1" name="">
+              <param name="Name" value="T4_6" />
+              <param name="Freq" value="60.0 [Hz]" />
+              <param name="Length" value="0.001 [km]" />
+              <param name="Dim" value="3" />
+              <param name="Mode" value="1" />
+              <param name="cct_overlayed" value="0" />
+              <param name="CoupleEnab" value="0" />
+              <param name="CoupleName" value="row" />
+              <param name="CoupleOffset" value="0.0 [m]" />
+              <param name="CoupleRef" value="0" />
+              <param name="ManEnab" value="0" />
+              <param name="DataFormat" value="0" />
+              <param name="VR" value="230.0 [kV]" />
+              <param name="MVA" value="100.0 [MVA]" />
+              <param name="r0mpu" value="dim (10,10)">
+                <row><![CDATA[-1,-1,-1,-1,-1,-1,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,-1,-1,-1,-1,-1,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,-1,-1,-1,-1,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,0,-1,-1,-1,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,0,0,-1,-1,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,0,0,0,-1,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,0,0,0,0,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,0,0,0,0,0,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,0,0,0,0,0,0,-1,-1]]></row>
+                <row><![CDATA[0,0,0,0,0,0,0,0,0,-1]]></row>
+              </param>
+              <param name="r0m" value="dim (10,10)">
+                <row><![CDATA[-1,-1,-1,-1,-1,-1,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,-1,-1,-1,-1,-1,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,-1,-1,-1,-1,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,0,-1,-1,-1,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,0,0,-1,-1,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,0,0,0,-1,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,0,0,0,0,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,0,0,0,0,0,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,0,0,0,0,0,0,-1,-1]]></row>
+                <row><![CDATA[0,0,0,0,0,0,0,0,0,-1]]></row>
+              </param>
+              <param name="xl0mpu" value="dim (10,10)">
+                <row><![CDATA[-1,-1,-1,-1,-1,-1,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,-1,-1,-1,-1,-1,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,-1,-1,-1,-1,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,0,-1,-1,-1,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,0,0,-1,-1,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,0,0,0,-1,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,0,0,0,0,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,0,0,0,0,0,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,0,0,0,0,0,0,-1,-1]]></row>
+                <row><![CDATA[0,0,0,0,0,0,0,0,0,-1]]></row>
+              </param>
+              <param name="xl0m" value="dim (10,10)">
+                <row><![CDATA[-1,-1,-1,-1,-1,-1,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,-1,-1,-1,-1,-1,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,-1,-1,-1,-1,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,0,-1,-1,-1,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,0,0,-1,-1,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,0,0,0,-1,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,0,0,0,0,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,0,0,0,0,0,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,0,0,0,0,0,0,-1,-1]]></row>
+                <row><![CDATA[0,0,0,0,0,0,0,0,0,-1]]></row>
+              </param>
+              <param name="xc0mpu" value="dim (10,10)">
+                <row><![CDATA[-1,-1,-1,-1,-1,-1,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,-1,-1,-1,-1,-1,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,-1,-1,-1,-1,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,0,-1,-1,-1,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,0,0,-1,-1,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,0,0,0,-1,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,0,0,0,0,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,0,0,0,0,0,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,0,0,0,0,0,0,-1,-1]]></row>
+                <row><![CDATA[0,0,0,0,0,0,0,0,0,-1]]></row>
+              </param>
+              <param name="xc0m" value="dim (10,10)">
+                <row><![CDATA[-1,-1,-1,-1,-1,-1,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,-1,-1,-1,-1,-1,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,-1,-1,-1,-1,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,0,-1,-1,-1,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,0,0,-1,-1,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,0,0,0,-1,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,0,0,0,0,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,0,0,0,0,0,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,0,0,0,0,0,0,-1,-1]]></row>
+                <row><![CDATA[0,0,0,0,0,0,0,0,0,-1]]></row>
+              </param>
+              <param name="bc0mpu" value="dim (10,10)">
+                <row><![CDATA[-1,-1,-1,-1,-1,-1,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,-1,-1,-1,-1,-1,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,-1,-1,-1,-1,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,0,-1,-1,-1,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,0,0,-1,-1,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,0,0,0,-1,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,0,0,0,0,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,0,0,0,0,0,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,0,0,0,0,0,0,-1,-1]]></row>
+                <row><![CDATA[0,0,0,0,0,0,0,0,0,-1]]></row>
+              </param>
+              <param name="tt0m" value="dim (10,10)">
+                <row><![CDATA[-1,-1,-1,-1,-1,-1,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,-1,-1,-1,-1,-1,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,-1,-1,-1,-1,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,0,-1,-1,-1,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,0,0,-1,-1,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,0,0,0,-1,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,0,0,0,0,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,0,0,0,0,0,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,0,0,0,0,0,0,-1,-1]]></row>
+                <row><![CDATA[0,0,0,0,0,0,0,0,0,-1]]></row>
+              </param>
+              <param name="zs0m" value="dim (10,10)">
+                <row><![CDATA[-1,-1,-1,-1,-1,-1,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,-1,-1,-1,-1,-1,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,-1,-1,-1,-1,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,0,-1,-1,-1,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,0,0,-1,-1,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,0,0,0,-1,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,0,0,0,0,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,0,0,0,0,0,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,0,0,0,0,0,0,-1,-1]]></row>
+                <row><![CDATA[0,0,0,0,0,0,0,0,0,-1]]></row>
+              </param>
+              <param name="Date" value="-1" />
+            </paramlist>
+          </User>
+          <vertex x="0" y="0" />
+          <vertex x="0" y="18" />
+          <vertex x="108" y="-18" />
+          <vertex x="108" y="0" />
+        </Wire>
+      </schematic>
+      <references>
+        <using namespace="master" />
+      </references>
+    </Definition>
+    <Definition classid="UserCmpDefn" name="T5_7" group="" url="" version="" build="" crc="23645195" instances="1" key="" view="false" date="1408552981">
+      <paramlist name="">
+        <param name="Description" value="" />
+      </paramlist>
+      <form name="" w="320" h="400" splitter="60">
+        <category name="Configuration">
+          <cond />
+          <parameter desc="Name" name="Name" group="" type="Text">
+            <value />
+            <cond />
+          </parameter>
+        </category>
+      </form>
+      <svg viewBox="-200 -200 200 200">
+        <paramlist>
+          <param name="show_grid" value="0" />
+          <param name="size" value="0" />
+          <param name="orient" value="1" />
+          <param name="show_border" value="0" />
+        </paramlist>
+        <port model="Natural" name="in" x="-36" y="0" dim="3" mode="Electrical" type="NonRemovable" internal="false"><![CDATA[true]]></port>
+        <port model="Natural" name="out" x="36" y="0" dim="3" mode="Electrical" type="NonRemovable" internal="false"><![CDATA[true]]></port>
+        <cond><![CDATA[true]]></cond>
+        <rect x="-18" y="-3" width="36" height="6" stroke="black" stroke-width="0.2" stroke-dasharray="none" fill-style="Solid" fill-fg="black" fill-bg="black" />
+        <line x1="-36" y1="0" x2="36" y2="0" stroke="Black" stroke-dasharray="none" stroke-width="0.2" port="" />
+        <text x="-1" y="-8" stroke="Black" font-size="Small" text-anchor="Middle"><![CDATA[T5_7]]></text>
+      </svg>
+      <schematic classid="UserCanvas" zoomlevel="6" scrollx="0" scrolly="0">
+        <paramlist>
+          <param name="show_grid" value="0" />
+          <param name="size" value="0" />
+          <param name="orient" value="1" />
+          <param name="show_border" value="0" />
+          <param name="monitor_bus_voltage" value="0" />
+          <param name="show_signal" value="0" />
+          <param name="show_virtual" value="0" />
+          <param name="show_sequence" value="0" />
+          <param name="auto_sequence" value="1" />
+        </paramlist>
+        <Wire classid="WireOrthogonal" id="1170812085" name="" x="342" y="126" w="62" h="8" orient="0" layer="">
+          <vertex x="0" y="0" />
+          <vertex x="54" y="0" />
+        </Wire>
+        <Wire classid="WireOrthogonal" id="1968702350" name="" x="198" y="126" w="44" h="8" orient="0" layer="">
+          <vertex x="0" y="0" />
+          <vertex x="36" y="0" />
+        </Wire>
+        <User classid="UserCmp" name="master:xnode" id="1676908992" x="396" y="126" w="18" h="30" z="1" orient="0" defn="master:xnode" link="-1" layer="" q="4">
+          <paramlist link="-1" name="">
+            <param name="Name" value="out" />
+          </paramlist>
+        </User>
+        <User classid="UserCmp" name="master:xnode" id="235126225" x="198" y="126" w="16" h="30" z="1" orient="0" defn="master:xnode" link="-1" layer="" q="4">
+          <paramlist link="-1" name="">
+            <param name="Name" value="in" />
+          </paramlist>
+        </User>
+        <Wire classid="TLine" id="802219032" name="New_IEEE_09_CT:T5_8" x="234" y="126" w="116" h="44" orient="0" defn="New_IEEE_09_CT:T5_8" recv="-1" send="-1" back="-1" layer="">
+          <User classid="UserCmp" name="New_IEEE_09_CT:T5_8" id="802219032" x="0" y="0" w="0" h="0" z="-1" orient="0" defn="New_IEEE_09_CT:T5_8" link="802219032" layer="" q="4">
+            <paramlist link="-1" name="">
+              <param name="Name" value="T5_7" />
+              <param name="Freq" value="60.0 [Hz]" />
+              <param name="Length" value="0.001 [km]" />
+              <param name="Dim" value="3" />
+              <param name="Mode" value="1" />
+              <param name="cct_overlayed" value="0" />
+              <param name="CoupleEnab" value="0" />
+              <param name="CoupleName" value="row" />
+              <param name="CoupleOffset" value="0.0 [m]" />
+              <param name="CoupleRef" value="0" />
+              <param name="ManEnab" value="0" />
+              <param name="DataFormat" value="0" />
+              <param name="VR" value="230.0 [kV]" />
+              <param name="MVA" value="100.0 [MVA]" />
+              <param name="r0mpu" value="dim (10,10)">
+                <row><![CDATA[-1,-1,-1,-1,-1,-1,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,-1,-1,-1,-1,-1,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,-1,-1,-1,-1,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,0,-1,-1,-1,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,0,0,-1,-1,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,0,0,0,-1,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,0,0,0,0,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,0,0,0,0,0,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,0,0,0,0,0,0,-1,-1]]></row>
+                <row><![CDATA[0,0,0,0,0,0,0,0,0,-1]]></row>
+              </param>
+              <param name="r0m" value="dim (10,10)">
+                <row><![CDATA[-1,-1,-1,-1,-1,-1,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,-1,-1,-1,-1,-1,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,-1,-1,-1,-1,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,0,-1,-1,-1,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,0,0,-1,-1,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,0,0,0,-1,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,0,0,0,0,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,0,0,0,0,0,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,0,0,0,0,0,0,-1,-1]]></row>
+                <row><![CDATA[0,0,0,0,0,0,0,0,0,-1]]></row>
+              </param>
+              <param name="xl0mpu" value="dim (10,10)">
+                <row><![CDATA[-1,-1,-1,-1,-1,-1,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,-1,-1,-1,-1,-1,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,-1,-1,-1,-1,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,0,-1,-1,-1,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,0,0,-1,-1,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,0,0,0,-1,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,0,0,0,0,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,0,0,0,0,0,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,0,0,0,0,0,0,-1,-1]]></row>
+                <row><![CDATA[0,0,0,0,0,0,0,0,0,-1]]></row>
+              </param>
+              <param name="xl0m" value="dim (10,10)">
+                <row><![CDATA[-1,-1,-1,-1,-1,-1,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,-1,-1,-1,-1,-1,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,-1,-1,-1,-1,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,0,-1,-1,-1,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,0,0,-1,-1,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,0,0,0,-1,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,0,0,0,0,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,0,0,0,0,0,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,0,0,0,0,0,0,-1,-1]]></row>
+                <row><![CDATA[0,0,0,0,0,0,0,0,0,-1]]></row>
+              </param>
+              <param name="xc0mpu" value="dim (10,10)">
+                <row><![CDATA[-1,-1,-1,-1,-1,-1,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,-1,-1,-1,-1,-1,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,-1,-1,-1,-1,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,0,-1,-1,-1,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,0,0,-1,-1,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,0,0,0,-1,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,0,0,0,0,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,0,0,0,0,0,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,0,0,0,0,0,0,-1,-1]]></row>
+                <row><![CDATA[0,0,0,0,0,0,0,0,0,-1]]></row>
+              </param>
+              <param name="xc0m" value="dim (10,10)">
+                <row><![CDATA[-1,-1,-1,-1,-1,-1,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,-1,-1,-1,-1,-1,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,-1,-1,-1,-1,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,0,-1,-1,-1,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,0,0,-1,-1,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,0,0,0,-1,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,0,0,0,0,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,0,0,0,0,0,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,0,0,0,0,0,0,-1,-1]]></row>
+                <row><![CDATA[0,0,0,0,0,0,0,0,0,-1]]></row>
+              </param>
+              <param name="bc0mpu" value="dim (10,10)">
+                <row><![CDATA[-1,-1,-1,-1,-1,-1,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,-1,-1,-1,-1,-1,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,-1,-1,-1,-1,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,0,-1,-1,-1,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,0,0,-1,-1,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,0,0,0,-1,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,0,0,0,0,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,0,0,0,0,0,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,0,0,0,0,0,0,-1,-1]]></row>
+                <row><![CDATA[0,0,0,0,0,0,0,0,0,-1]]></row>
+              </param>
+              <param name="tt0m" value="dim (10,10)">
+                <row><![CDATA[-1,-1,-1,-1,-1,-1,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,-1,-1,-1,-1,-1,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,-1,-1,-1,-1,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,0,-1,-1,-1,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,0,0,-1,-1,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,0,0,0,-1,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,0,0,0,0,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,0,0,0,0,0,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,0,0,0,0,0,0,-1,-1]]></row>
+                <row><![CDATA[0,0,0,0,0,0,0,0,0,-1]]></row>
+              </param>
+              <param name="zs0m" value="dim (10,10)">
+                <row><![CDATA[-1,-1,-1,-1,-1,-1,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,-1,-1,-1,-1,-1,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,-1,-1,-1,-1,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,0,-1,-1,-1,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,0,0,-1,-1,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,0,0,0,-1,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,0,0,0,0,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,0,0,0,0,0,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,0,0,0,0,0,0,-1,-1]]></row>
+                <row><![CDATA[0,0,0,0,0,0,0,0,0,-1]]></row>
+              </param>
+              <param name="Date" value="-1" />
+            </paramlist>
+          </User>
+          <vertex x="0" y="0" />
+          <vertex x="0" y="18" />
+          <vertex x="108" y="-18" />
+          <vertex x="108" y="0" />
+        </Wire>
+      </schematic>
+      <references>
+        <using namespace="master" />
+      </references>
+    </Definition>
+    <Definition classid="UserCmpDefn" name="T6_9" group="" url="" version="" build="" crc="45516742" instances="1" key="" view="false" date="1408552981">
+      <paramlist name="">
+        <param name="Description" value="" />
+      </paramlist>
+      <form name="" w="320" h="400" splitter="60">
+        <category name="Configuration">
+          <cond />
+          <parameter desc="Name" name="Name" group="" type="Text">
+            <value />
+            <cond />
+          </parameter>
+        </category>
+      </form>
+      <svg viewBox="-200 -200 200 200">
+        <paramlist>
+          <param name="show_grid" value="0" />
+          <param name="size" value="0" />
+          <param name="orient" value="1" />
+          <param name="show_border" value="0" />
+        </paramlist>
+        <port model="Natural" name="in" x="-36" y="0" dim="3" mode="Electrical" type="NonRemovable" internal="false"><![CDATA[true]]></port>
+        <port model="Natural" name="out" x="36" y="0" dim="3" mode="Electrical" type="NonRemovable" internal="false"><![CDATA[true]]></port>
+        <cond><![CDATA[true]]></cond>
+        <rect x="-18" y="-3" width="36" height="6" stroke="black" stroke-width="0.2" stroke-dasharray="none" fill-style="Solid" fill-fg="black" fill-bg="black" />
+        <line x1="-36" y1="0" x2="36" y2="0" stroke="Black" stroke-dasharray="none" stroke-width="0.2" port="" />
+        <text x="-1" y="-8" stroke="Black" font-size="Small" text-anchor="Middle"><![CDATA[T6_9]]></text>
+      </svg>
+      <schematic classid="UserCanvas" zoomlevel="6" scrollx="0" scrolly="0">
+        <paramlist>
+          <param name="show_grid" value="0" />
+          <param name="size" value="0" />
+          <param name="orient" value="1" />
+          <param name="show_border" value="0" />
+          <param name="monitor_bus_voltage" value="0" />
+          <param name="show_signal" value="0" />
+          <param name="show_virtual" value="0" />
+          <param name="show_sequence" value="0" />
+          <param name="auto_sequence" value="1" />
+        </paramlist>
+        <User classid="UserCmp" name="master:xnode" id="708178057" x="360" y="126" w="16" h="30" z="1" orient="0" defn="master:xnode" link="-1" layer="" q="4">
+          <paramlist link="-1" name="">
+            <param name="Name" value="in" />
+          </paramlist>
+        </User>
+        <User classid="UserCmp" name="master:xnode" id="448307666" x="558" y="126" w="18" h="30" z="1" orient="0" defn="master:xnode" link="-1" layer="" q="4">
+          <paramlist link="-1" name="">
+            <param name="Name" value="out" />
+          </paramlist>
+        </User>
+        <Wire classid="WireOrthogonal" id="882480046" name="" x="360" y="126" w="44" h="8" orient="0" layer="">
+          <vertex x="0" y="0" />
+          <vertex x="36" y="0" />
+        </Wire>
+        <Wire classid="WireOrthogonal" id="1723866548" name="" x="504" y="126" w="62" h="8" orient="0" layer="">
+          <vertex x="0" y="0" />
+          <vertex x="54" y="0" />
+        </Wire>
+        <Wire classid="TLine" id="2008548152" name="New_IEEE_09_CT:T6_10" x="396" y="126" w="116" h="44" orient="0" defn="New_IEEE_09_CT:T6_10" recv="-1" send="-1" back="-1" layer="">
+          <User classid="UserCmp" name="New_IEEE_09_CT:T6_10" id="2008548152" x="0" y="0" w="0" h="0" z="-1" orient="0" defn="New_IEEE_09_CT:T6_10" link="2008548152" layer="" q="4">
+            <paramlist link="-1" name="">
+              <param name="Name" value="T6_9" />
+              <param name="Freq" value="60.0 [Hz]" />
+              <param name="Length" value="0.001 [km]" />
+              <param name="Dim" value="3" />
+              <param name="Mode" value="1" />
+              <param name="cct_overlayed" value="0" />
+              <param name="CoupleEnab" value="0" />
+              <param name="CoupleName" value="row" />
+              <param name="CoupleOffset" value="0.0 [m]" />
+              <param name="CoupleRef" value="0" />
+              <param name="ManEnab" value="0" />
+              <param name="DataFormat" value="0" />
+              <param name="VR" value="230.0 [kV]" />
+              <param name="MVA" value="100.0 [MVA]" />
+              <param name="r0mpu" value="dim (10,10)">
+                <row><![CDATA[-1,-1,-1,-1,-1,-1,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,-1,-1,-1,-1,-1,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,-1,-1,-1,-1,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,0,-1,-1,-1,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,0,0,-1,-1,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,0,0,0,-1,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,0,0,0,0,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,0,0,0,0,0,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,0,0,0,0,0,0,-1,-1]]></row>
+                <row><![CDATA[0,0,0,0,0,0,0,0,0,-1]]></row>
+              </param>
+              <param name="r0m" value="dim (10,10)">
+                <row><![CDATA[-1,-1,-1,-1,-1,-1,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,-1,-1,-1,-1,-1,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,-1,-1,-1,-1,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,0,-1,-1,-1,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,0,0,-1,-1,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,0,0,0,-1,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,0,0,0,0,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,0,0,0,0,0,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,0,0,0,0,0,0,-1,-1]]></row>
+                <row><![CDATA[0,0,0,0,0,0,0,0,0,-1]]></row>
+              </param>
+              <param name="xl0mpu" value="dim (10,10)">
+                <row><![CDATA[-1,-1,-1,-1,-1,-1,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,-1,-1,-1,-1,-1,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,-1,-1,-1,-1,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,0,-1,-1,-1,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,0,0,-1,-1,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,0,0,0,-1,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,0,0,0,0,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,0,0,0,0,0,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,0,0,0,0,0,0,-1,-1]]></row>
+                <row><![CDATA[0,0,0,0,0,0,0,0,0,-1]]></row>
+              </param>
+              <param name="xl0m" value="dim (10,10)">
+                <row><![CDATA[-1,-1,-1,-1,-1,-1,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,-1,-1,-1,-1,-1,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,-1,-1,-1,-1,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,0,-1,-1,-1,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,0,0,-1,-1,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,0,0,0,-1,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,0,0,0,0,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,0,0,0,0,0,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,0,0,0,0,0,0,-1,-1]]></row>
+                <row><![CDATA[0,0,0,0,0,0,0,0,0,-1]]></row>
+              </param>
+              <param name="xc0mpu" value="dim (10,10)">
+                <row><![CDATA[-1,-1,-1,-1,-1,-1,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,-1,-1,-1,-1,-1,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,-1,-1,-1,-1,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,0,-1,-1,-1,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,0,0,-1,-1,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,0,0,0,-1,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,0,0,0,0,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,0,0,0,0,0,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,0,0,0,0,0,0,-1,-1]]></row>
+                <row><![CDATA[0,0,0,0,0,0,0,0,0,-1]]></row>
+              </param>
+              <param name="xc0m" value="dim (10,10)">
+                <row><![CDATA[-1,-1,-1,-1,-1,-1,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,-1,-1,-1,-1,-1,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,-1,-1,-1,-1,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,0,-1,-1,-1,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,0,0,-1,-1,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,0,0,0,-1,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,0,0,0,0,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,0,0,0,0,0,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,0,0,0,0,0,0,-1,-1]]></row>
+                <row><![CDATA[0,0,0,0,0,0,0,0,0,-1]]></row>
+              </param>
+              <param name="bc0mpu" value="dim (10,10)">
+                <row><![CDATA[-1,-1,-1,-1,-1,-1,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,-1,-1,-1,-1,-1,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,-1,-1,-1,-1,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,0,-1,-1,-1,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,0,0,-1,-1,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,0,0,0,-1,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,0,0,0,0,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,0,0,0,0,0,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,0,0,0,0,0,0,-1,-1]]></row>
+                <row><![CDATA[0,0,0,0,0,0,0,0,0,-1]]></row>
+              </param>
+              <param name="tt0m" value="dim (10,10)">
+                <row><![CDATA[-1,-1,-1,-1,-1,-1,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,-1,-1,-1,-1,-1,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,-1,-1,-1,-1,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,0,-1,-1,-1,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,0,0,-1,-1,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,0,0,0,-1,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,0,0,0,0,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,0,0,0,0,0,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,0,0,0,0,0,0,-1,-1]]></row>
+                <row><![CDATA[0,0,0,0,0,0,0,0,0,-1]]></row>
+              </param>
+              <param name="zs0m" value="dim (10,10)">
+                <row><![CDATA[-1,-1,-1,-1,-1,-1,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,-1,-1,-1,-1,-1,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,-1,-1,-1,-1,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,0,-1,-1,-1,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,0,0,-1,-1,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,0,0,0,-1,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,0,0,0,0,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,0,0,0,0,0,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,0,0,0,0,0,0,-1,-1]]></row>
+                <row><![CDATA[0,0,0,0,0,0,0,0,0,-1]]></row>
+              </param>
+              <param name="Date" value="-1" />
+            </paramlist>
+          </User>
+          <vertex x="0" y="0" />
+          <vertex x="0" y="18" />
+          <vertex x="108" y="-18" />
+          <vertex x="108" y="0" />
+        </Wire>
+      </schematic>
+      <references>
+        <using namespace="master" />
+      </references>
+    </Definition>
+    <Definition classid="UserCmpDefn" name="T4_5" group="" url="" version="" build="" crc="27686089" instances="1" key="" view="false" date="1408552981">
+      <paramlist name="">
+        <param name="Description" value="" />
+      </paramlist>
+      <form name="" w="320" h="400" splitter="60">
+        <category name="Configuration">
+          <cond />
+          <parameter desc="Name" name="Name" group="" type="Text">
+            <value />
+            <cond />
+          </parameter>
+        </category>
+      </form>
+      <svg viewBox="-200 -200 200 200">
+        <paramlist>
+          <param name="show_grid" value="0" />
+          <param name="size" value="0" />
+          <param name="orient" value="1" />
+          <param name="show_border" value="0" />
+        </paramlist>
+        <port model="Natural" name="in" x="-36" y="0" dim="3" mode="Electrical" type="NonRemovable" internal="false"><![CDATA[true]]></port>
+        <port model="Natural" name="out" x="36" y="0" dim="3" mode="Electrical" type="NonRemovable" internal="false"><![CDATA[true]]></port>
+        <cond><![CDATA[true]]></cond>
+        <rect x="-18" y="-3" width="36" height="6" stroke="black" stroke-width="0.2" stroke-dasharray="none" fill-style="Solid" fill-fg="black" fill-bg="black" />
+        <line x1="-36" y1="0" x2="36" y2="0" stroke="Black" stroke-dasharray="none" stroke-width="0.2" port="" />
+        <text x="-1" y="-8" stroke="Black" font-size="Small" text-anchor="Middle"><![CDATA[T4_5]]></text>
+      </svg>
+      <schematic classid="UserCanvas" zoomlevel="6" scrollx="0" scrolly="0">
+        <paramlist>
+          <param name="show_grid" value="0" />
+          <param name="size" value="0" />
+          <param name="orient" value="1" />
+          <param name="show_border" value="0" />
+          <param name="monitor_bus_voltage" value="0" />
+          <param name="show_signal" value="0" />
+          <param name="show_virtual" value="0" />
+          <param name="show_sequence" value="0" />
+          <param name="auto_sequence" value="1" />
+        </paramlist>
+        <User classid="UserCmp" name="master:xnode" id="1335008891" x="234" y="108" w="16" h="30" z="1" orient="0" defn="master:xnode" link="-1" layer="" q="4">
+          <paramlist link="-1" name="">
+            <param name="Name" value="in" />
+          </paramlist>
+        </User>
+        <User classid="UserCmp" name="master:xnode" id="1021321704" x="432" y="108" w="18" h="30" z="1" orient="0" defn="master:xnode" link="-1" layer="" q="4">
+          <paramlist link="-1" name="">
+            <param name="Name" value="out" />
+          </paramlist>
+        </User>
+        <Wire classid="WireOrthogonal" id="913557095" name="" x="234" y="108" w="44" h="8" orient="0" layer="">
+          <vertex x="0" y="0" />
+          <vertex x="36" y="0" />
+        </Wire>
+        <Wire classid="WireOrthogonal" id="600997945" name="" x="378" y="108" w="62" h="8" orient="0" layer="">
+          <vertex x="0" y="0" />
+          <vertex x="54" y="0" />
+        </Wire>
+        <Wire classid="TLine" id="724169283" name="New_IEEE_09_CT:T4_7" x="270" y="108" w="116" h="44" orient="0" defn="New_IEEE_09_CT:T4_7" recv="-1" send="-1" back="-1" layer="">
+          <User classid="UserCmp" name="New_IEEE_09_CT:T4_7" id="724169283" x="0" y="0" w="0" h="0" z="-1" orient="0" defn="New_IEEE_09_CT:T4_7" link="724169283" layer="" q="4">
+            <paramlist link="-1" name="">
+              <param name="Name" value="T4_5" />
+              <param name="Freq" value="60.0 [Hz]" />
+              <param name="Length" value="0.001 [km]" />
+              <param name="Dim" value="3" />
+              <param name="Mode" value="1" />
+              <param name="cct_overlayed" value="0" />
+              <param name="CoupleEnab" value="0" />
+              <param name="CoupleName" value="row" />
+              <param name="CoupleOffset" value="0.0 [m]" />
+              <param name="CoupleRef" value="0" />
+              <param name="ManEnab" value="0" />
+              <param name="DataFormat" value="0" />
+              <param name="VR" value="230.0 [kV]" />
+              <param name="MVA" value="100.0 [MVA]" />
+              <param name="r0mpu" value="dim (10,10)">
+                <row><![CDATA[-1,-1,-1,-1,-1,-1,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,-1,-1,-1,-1,-1,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,-1,-1,-1,-1,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,0,-1,-1,-1,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,0,0,-1,-1,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,0,0,0,-1,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,0,0,0,0,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,0,0,0,0,0,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,0,0,0,0,0,0,-1,-1]]></row>
+                <row><![CDATA[0,0,0,0,0,0,0,0,0,-1]]></row>
+              </param>
+              <param name="r0m" value="dim (10,10)">
+                <row><![CDATA[-1,-1,-1,-1,-1,-1,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,-1,-1,-1,-1,-1,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,-1,-1,-1,-1,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,0,-1,-1,-1,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,0,0,-1,-1,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,0,0,0,-1,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,0,0,0,0,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,0,0,0,0,0,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,0,0,0,0,0,0,-1,-1]]></row>
+                <row><![CDATA[0,0,0,0,0,0,0,0,0,-1]]></row>
+              </param>
+              <param name="xl0mpu" value="dim (10,10)">
+                <row><![CDATA[-1,-1,-1,-1,-1,-1,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,-1,-1,-1,-1,-1,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,-1,-1,-1,-1,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,0,-1,-1,-1,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,0,0,-1,-1,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,0,0,0,-1,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,0,0,0,0,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,0,0,0,0,0,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,0,0,0,0,0,0,-1,-1]]></row>
+                <row><![CDATA[0,0,0,0,0,0,0,0,0,-1]]></row>
+              </param>
+              <param name="xl0m" value="dim (10,10)">
+                <row><![CDATA[-1,-1,-1,-1,-1,-1,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,-1,-1,-1,-1,-1,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,-1,-1,-1,-1,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,0,-1,-1,-1,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,0,0,-1,-1,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,0,0,0,-1,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,0,0,0,0,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,0,0,0,0,0,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,0,0,0,0,0,0,-1,-1]]></row>
+                <row><![CDATA[0,0,0,0,0,0,0,0,0,-1]]></row>
+              </param>
+              <param name="xc0mpu" value="dim (10,10)">
+                <row><![CDATA[-1,-1,-1,-1,-1,-1,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,-1,-1,-1,-1,-1,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,-1,-1,-1,-1,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,0,-1,-1,-1,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,0,0,-1,-1,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,0,0,0,-1,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,0,0,0,0,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,0,0,0,0,0,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,0,0,0,0,0,0,-1,-1]]></row>
+                <row><![CDATA[0,0,0,0,0,0,0,0,0,-1]]></row>
+              </param>
+              <param name="xc0m" value="dim (10,10)">
+                <row><![CDATA[-1,-1,-1,-1,-1,-1,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,-1,-1,-1,-1,-1,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,-1,-1,-1,-1,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,0,-1,-1,-1,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,0,0,-1,-1,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,0,0,0,-1,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,0,0,0,0,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,0,0,0,0,0,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,0,0,0,0,0,0,-1,-1]]></row>
+                <row><![CDATA[0,0,0,0,0,0,0,0,0,-1]]></row>
+              </param>
+              <param name="bc0mpu" value="dim (10,10)">
+                <row><![CDATA[-1,-1,-1,-1,-1,-1,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,-1,-1,-1,-1,-1,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,-1,-1,-1,-1,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,0,-1,-1,-1,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,0,0,-1,-1,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,0,0,0,-1,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,0,0,0,0,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,0,0,0,0,0,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,0,0,0,0,0,0,-1,-1]]></row>
+                <row><![CDATA[0,0,0,0,0,0,0,0,0,-1]]></row>
+              </param>
+              <param name="tt0m" value="dim (10,10)">
+                <row><![CDATA[-1,-1,-1,-1,-1,-1,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,-1,-1,-1,-1,-1,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,-1,-1,-1,-1,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,0,-1,-1,-1,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,0,0,-1,-1,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,0,0,0,-1,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,0,0,0,0,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,0,0,0,0,0,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,0,0,0,0,0,0,-1,-1]]></row>
+                <row><![CDATA[0,0,0,0,0,0,0,0,0,-1]]></row>
+              </param>
+              <param name="zs0m" value="dim (10,10)">
+                <row><![CDATA[-1,-1,-1,-1,-1,-1,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,-1,-1,-1,-1,-1,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,-1,-1,-1,-1,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,0,-1,-1,-1,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,0,0,-1,-1,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,0,0,0,-1,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,0,0,0,0,-1,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,0,0,0,0,0,-1,-1,-1]]></row>
+                <row><![CDATA[0,0,0,0,0,0,0,0,-1,-1]]></row>
+                <row><![CDATA[0,0,0,0,0,0,0,0,0,-1]]></row>
+              </param>
+              <param name="Date" value="-1" />
+            </paramlist>
+          </User>
+          <vertex x="0" y="0" />
+          <vertex x="0" y="18" />
+          <vertex x="108" y="-18" />
+          <vertex x="108" y="0" />
+        </Wire>
+      </schematic>
+      <references>
+        <using namespace="master" />
+      </references>
+    </Definition>
+    <Definition classid="StationDefn" name="Station" group="" url="" version="" build="" crc="115263696" instances="1" view="false">
+      <paramlist name="">
+        <param name="Description" value="" />
+      </paramlist>
+      <schematic classid="StationCanvas">
+        <paramlist>
+          <param name="show_grid" value="0" />
+          <param name="size" value="0" />
+          <param name="orient" value="1" />
+          <param name="show_border" value="0" />
+        </paramlist>
+        <Wire classid="WireBranch" id="84624640" name="STUB" x="180" y="180" w="62" h="80" orient="0" defn="(null):STUB" recv="-1" send="-1" back="-1" layer="">
+          <vertex x="0" y="0" />
+          <vertex x="0" y="18" />
+          <vertex x="54" y="54" />
+          <vertex x="54" y="72" />
+          <User classid="UserCmp" name="New_IEEE_09_CT:Main" id="84624640" x="0" y="0" w="0" h="0" z="-1" orient="0" defn="New_IEEE_09_CT:Main" link="84624640" layer="" q="4">
+            <paramlist link="-1" name="" />
+          </User>
+        </Wire>
+      </schematic>
+    </Definition>
+    <Definition classid="UserCmpDefn" name="Main" group="" url="" version="" build="" crc="67593185" instances="1" view="false" date="1408552981">
+      <paramlist name="">
+        <param name="Description" value="" />
+      </paramlist>
+      <form name="" w="320" h="400" splitter="60">
+        <category name="Global Substitutions" />
+      </form>
+      <svg viewBox="-200 -200 200 200">
+        <rect x="-36" y="-36" width="72" height="72" stroke="Black" stroke-dasharray="none" stroke-width="0.2" fill-style="Hollow" fill-fg="" fill-bg="" />
+        <text x="0" y="0" stroke="Black" fill="Black" font-size="Small"><![CDATA[%:Name]]></text>
+      </svg>
+      <schematic classid="UserCanvas">
+        <paramlist>
+          <param name="show_grid" value="0" />
+          <param name="size" value="4" />
+          <param name="orient" value="1" />
+          <param name="show_border" value="0" />
+          <param name="monitor_bus_voltage" value="0" />
+          <param name="show_signal" value="0" />
+          <param name="show_virtual" value="0" />
+          <param name="show_sequence" value="0" />
+          <param name="auto_sequence" value="1" />
+          <param name="virtual_filter" value="" />
+        </paramlist>
+        <User classid="UserCmp" defn="master:xfmr-3p2w" id="170974727" x="1008" y="324" w="92" h="60" z="70" orient="4" link="-1" layer="" q="4">
+          <paramlist link="-1" name="">
+            <param name="Name" value="" />
+            <param name="Tmva" value="100.0 [MVA]" />
+            <param name="f" value="60.0 [Hz]" />
+            <param name="YD1" value="0" />
+            <param name="YD2" value="0" />
+            <param name="Lead" value="1" />
+            <param name="Xl" value="0.05860 [pu]" />
+            <param name="Ideal" value="1" />
+            <param name="NLL" value="0.0 [pu]" />
+            <param name="CuL" value="0.0 [pu]" />
+            <param name="Tap" value="1" />
+            <param name="View" value="1" />
+            <param name="Dtls" value="0" />
+            <param name="V1" value="13.8 [kV]" />
+            <param name="V2" value="230.0 [kV]" />
+            <param name="Enab" value="0" />
+            <param name="Sat" value="1" />
+            <param name="Xair" value="0.2 [pu]" />
+            <param name="Tdc" value="0.0 [s]" />
+            <param name="Xknee" value="1.17 [pu]" />
+            <param name="Txk" value="0.0 [s]" />
+            <param name="Im1" value="2.0 [%]" />
+            <param name="ILA1" value="" />
+            <param name="ILB1" value="" />
+            <param name="ILC1" value="" />
+            <param name="IAB1" value="" />
+            <param name="IBC1" value="" />
+            <param name="ICA1" value="" />
+            <param name="ILA2" value="" />
+            <param name="ILB2" value="" />
+            <param name="ILC2" value="" />
+            <param name="IAB2" value="" />
+            <param name="IBC2" value="" />
+            <param name="ICA2" value="" />
+            <param name="IMA" value="" />
+            <param name="IMB" value="" />
+            <param name="IMC" value="" />
+            <param name="FLXA" value="" />
+            <param name="FLXB" value="" />
+            <param name="FLXC" value="" />
+            <param name="IMAB" value="" />
+            <param name="IMBC" value="" />
+            <param name="IMCA" value="" />
+            <param name="FLXAB" value="" />
+            <param name="FLXBC" value="" />
+            <param name="FLXCA" value="" />
+          </paramlist>
+        </User>
+        <User classid="UserCmp" defn="master:fixed_load" id="1275297413" x="450" y="522" w="28" h="49" z="1" orient="0" link="-1" layer="" q="4">
+          <paramlist link="-1" name="">
+            <param name="PO" value="41.66667 [MW]" />
+            <param name="QO" value="16.66667 [MVAR]" />
+            <param name="VBO" value="132.790562 [kV]" />
+            <param name="NP" value="0" />
+            <param name="NQ" value="0" />
+            <param name="KPF" value="0" />
+            <param name="KQF" value="0" />
+            <param name="FR" value="60 [Hz]" />
+            <param name="Dtls" value="0" />
+            <param name="R1" value="" />
+            <param name="L1" value="" />
+            <param name="C1" value="" />
+          </paramlist>
+        </User>
+        <User classid="UserCmp" name="master:source3" id="1515890201" x="180" y="324" w="74" h="35" z="1" orient="0" defn="master:source3" link="-1" layer="" q="4">
+          <paramlist link="-1" name="">
+            <param name="Name" value="Source1" />
+            <param name="Type" value="4" />
+            <param name="Ctrl" value="0" />
+            <param name="MVA" value="100.0 [MVA]" />
+            <param name="Vm" value="18.0 [kV]" />
+            <param name="F" value="60.0 [Hz]" />
+            <param name="Tc" value="0.05 [s]" />
+            <param name="ZSeq" value="0" />
+            <param name="Imp" value="1" />
+            <param name="Exph" value="0" />
+            <param name="View" value="1" />
+            <param name="Term" value="1" />
+            <param name="R1s" value="1.0 [ohm]" />
+            <param name="R1p" value="1.0 [ohm]" />
+            <param name="L1p" value="0.1 [H]" />
+            <param name="Z1" value="1.0 [ohm]" />
+            <param name="Phi1" value="80.0 [deg]" />
+            <param name="RN" value="2.0" />
+            <param name="R0p" value="1.0 [ohm]" />
+            <param name="L0p" value="0.1 [H]" />
+            <param name="Z0" value="1.0 [ohm]" />
+            <param name="Phi0" value="80.0 [deg]" />
+            <param name="Es" value="18.45 [kV]" />
+            <param name="F0" value="60.0 [Hz]" />
+            <param name="Ph" value="9.3507 [deg]" />
+            <param name="Pinit" value="1.63 [pu]" />
+            <param name="Qinit" value="0.04903 [pu]" />
+            <param name="VCtrl" value="0" />
+            <param name="Vdes" value="1.0 [pu]" />
+            <param name="Vbase" value="230.0 [kV]" />
+            <param name="Tvm" value="0.02 [s]" />
+            <param name="Tvc" value="0.05 [s]" />
+            <param name="PCtrl" value="0" />
+            <param name="Pdes" value="1.0 [pu]" />
+            <param name="Tpm" value="0.02 [s]" />
+            <param name="Tpc" value="0.05 [s]" />
+            <param name="P" value="" />
+            <param name="Q" value="" />
+            <param name="V" value="" />
+            <param name="Theta" value="" />
+            <param name="Ia" value="" />
+            <param name="Ib" value="" />
+            <param name="Ic" value="" />
+            <param name="PS" value="0" />
+            <param name="R0s" value="1.0 [ohm]" />
+            <param name="L0s" value="0.0001 [H]" />
+          </paramlist>
+        </User>
+        <User classid="UserCmp" name="master:ground" id="1923342101" x="144" y="324" w="26" h="20" z="0" orient="2" defn="master:ground" link="-1" layer="" q="4">
+          <paramlist link="-1" name="" />
+        </User>
+        <Sticky classid="Sticky" id="975503493" x="0" y="0" w="378" h="234" colors="0, 15792890" layer="">
+          <paramlist>
+            <param name="font" value="1" />
+            <param name="align" value="0" />
+            <param name="style" value="1" />
+            <param name="fg_color" value="0" />
+            <param name="bg_color" value="15792890" />
+            <param name="arrows" value="0" />
+          </paramlist><![CDATA[IEEE 09 Test System
+Date: August 2014
+Developed by: Arash Darbandi & Chelsea Taylor
+Reviewed by: Lalin Kothalawala
+
+For inquiries, contact us at: pscad@support.com
+
+Reference:
+http://publish.illinois.edu/smartergrid/
+
+Note:
+All parameters are per unitized in 100 [MVA], 60 [Hz].
+
+Raw file data are available via PSS/E module.]]></Sticky>
+        <User classid="UserCmp" name="master:multimeter" id="470679792" x="234" y="324" w="68" h="94" z="1" orient="0" defn="master:multimeter" link="-1" layer="" q="4">
+          <paramlist link="-1" name="">
+            <param name="MeasI" value="0" />
+            <param name="MeasV" value="0" />
+            <param name="MeasP" value="1" />
+            <param name="MeasQ" value="1" />
+            <param name="RMS" value="1" />
+            <param name="MeasPh" value="0" />
+            <param name="S" value="100.0 [MVA]" />
+            <param name="BaseV" value="18 [kV]" />
+            <param name="TS" value="0.02 [s]" />
+            <param name="Freq" value="60.0 [Hz]" />
+            <param name="Dis" value="1" />
+            <param name="CurI" value="" />
+            <param name="VolI" value="" />
+            <param name="P" value="" />
+            <param name="Q" value="" />
+            <param name="Vrms" value="" />
+            <param name="Ph" value="" />
+            <param name="hide1" value="1" />
+            <param name="hide2" value="1" />
+            <param name="Pd" value="1.632" />
+            <param name="Qd" value="0.04538" />
+            <param name="Vd" value="1.027" />
+            <param name="IRMS" value="0" />
+            <param name="BaseA" value="1.0" />
+            <param name="Crms" value="" />
+          </paramlist>
+        </User>
+        <User classid="UserCmp" name="New_IEEE_09_CT:psse" id="782780565" x="432" y="54" w="80" h="80" z="10" orient="0" defn="New_IEEE_09_CT:psse" link="-1" layer="" q="4">
+          <paramlist link="-1" name="">
+            <param name="Name" value="" />
+          </paramlist>
+        </User>
+        <Wire classid="Bus" name="" id="2089654004" x="936" y="288" w="35" h="80" orient="0" layer="">
+          <paramlist>
+            <param name="Name" value="Bus9" />
+            <param name="BaseKV" value="230" />
+            <param name="VRMS" value="#NaN" />
+          </paramlist>
+          <vertex x="0" y="0" />
+          <vertex x="0" y="72" />
+        </Wire>
+        <Wire classid="Bus" name="" id="337795032" x="432" y="504" w="98" h="22" orient="0" layer="">
+          <paramlist>
+            <param name="Name" value="Bus5" />
+            <param name="BaseKV" value="230" />
+            <param name="VRMS" value="#NaN" />
+          </paramlist>
+          <vertex x="0" y="0" />
+          <vertex x="90" y="0" />
+        </Wire>
+        <Wire classid="WireOrthogonal" id="918705698" name="" x="252" y="324" w="44" h="8" orient="0" layer="">
+          <vertex x="0" y="0" />
+          <vertex x="36" y="0" />
+        </Wire>
+        <User classid="UserCmp" name="master:annotation" id="476925669" x="648" y="810" w="54" h="17" z="1" orient="4" defn="master:annotation" link="-1" layer="" q="4">
+          <paramlist link="-1" name="">
+            <param name="AL1" value="slack bus" />
+            <param name="AL2" value="" />
+          </paramlist>
+        </User>
+        <User classid="UserCmp" name="master:source3" id="333691943" x="702" y="846" w="35" h="74" z="1" orient="5" defn="master:source3" link="-1" layer="" q="4">
+          <paramlist link="-1" name="">
+            <param name="Name" value="Source1" />
+            <param name="Type" value="4" />
+            <param name="Ctrl" value="0" />
+            <param name="MVA" value="100.0 [MVA]" />
+            <param name="Vm" value="16.5 [kV]" />
+            <param name="F" value="60.0 [Hz]" />
+            <param name="Tc" value="0.05 [s]" />
+            <param name="ZSeq" value="0" />
+            <param name="Imp" value="1" />
+            <param name="Exph" value="0" />
+            <param name="View" value="1" />
+            <param name="Term" value="1" />
+            <param name="R1s" value="1.0 [ohm]" />
+            <param name="R1p" value="1.0 [ohm]" />
+            <param name="L1p" value="0.1 [H]" />
+            <param name="Z1" value="1.0 [ohm]" />
+            <param name="Phi1" value="80.0 [deg]" />
+            <param name="RN" value="2.0" />
+            <param name="R0p" value="1.0 [ohm]" />
+            <param name="L0p" value="0.1 [H]" />
+            <param name="Z0" value="1.0 [ohm]" />
+            <param name="Phi0" value="80.0 [deg]" />
+            <param name="Es" value="17.16 [kV]" />
+            <param name="F0" value="60.0 [Hz]" />
+            <param name="Ph" value="0.0 [deg]" />
+            <param name="Pinit" value="0.71627 [pu]" />
+            <param name="Qinit" value="0.27915 [pu]" />
+            <param name="VCtrl" value="0" />
+            <param name="Vdes" value="1.0 [pu]" />
+            <param name="Vbase" value="230.0 [kV]" />
+            <param name="Tvm" value="0.02 [s]" />
+            <param name="Tvc" value="0.05 [s]" />
+            <param name="PCtrl" value="0" />
+            <param name="Pdes" value="1.0 [pu]" />
+            <param name="Tpm" value="0.02 [s]" />
+            <param name="Tpc" value="0.05 [s]" />
+            <param name="P" value="" />
+            <param name="Q" value="" />
+            <param name="V" value="" />
+            <param name="Theta" value="" />
+            <param name="Ia" value="" />
+            <param name="Ib" value="" />
+            <param name="Ic" value="" />
+            <param name="PS" value="0" />
+            <param name="R0s" value="1.0 [ohm]" />
+            <param name="L0s" value="0.0001 [H]" />
+          </paramlist>
+        </User>
+        <User classid="UserCmp" name="master:ground" id="1697017163" x="702" y="882" w="20" h="26" z="0" orient="7" defn="master:ground" link="-1" layer="" q="4">
+          <paramlist link="-1" name="" />
+        </User>
+        <User classid="UserCmp" name="master:multimeter" id="538424315" x="702" y="792" w="94" h="62" z="1" orient="5" defn="master:multimeter" link="-1" layer="" q="4">
+          <paramlist link="-1" name="">
+            <param name="MeasI" value="0" />
+            <param name="MeasV" value="0" />
+            <param name="MeasP" value="1" />
+            <param name="MeasQ" value="1" />
+            <param name="RMS" value="1" />
+            <param name="MeasPh" value="0" />
+            <param name="S" value="100.0 [MVA]" />
+            <param name="BaseV" value="16.5 [kV]" />
+            <param name="TS" value="0.02 [s]" />
+            <param name="Freq" value="60.0 [Hz]" />
+            <param name="Dis" value="1" />
+            <param name="CurI" value="" />
+            <param name="VolI" value="" />
+            <param name="P" value="" />
+            <param name="Q" value="" />
+            <param name="Vrms" value="" />
+            <param name="Ph" value="" />
+            <param name="hide1" value="1" />
+            <param name="hide2" value="1" />
+            <param name="Pd" value="0.7152" />
+            <param name="Qd" value="0.2761" />
+            <param name="Vd" value="1.042" />
+            <param name="IRMS" value="0" />
+            <param name="BaseA" value="1.0" />
+            <param name="Crms" value="" />
+          </paramlist>
+        </User>
+        <Wire classid="WireOrthogonal" id="1238120371" name="" x="702" y="774" w="8" h="44" orient="0" layer="">
+          <vertex x="0" y="0" />
+          <vertex x="0" y="-36" />
+        </Wire>
+        <Wire classid="WireOrthogonal" id="686504764" name="" x="702" y="720" w="8" h="26" orient="0" layer="">
+          <vertex x="0" y="0" />
+          <vertex x="0" y="18" />
+        </Wire>
+        <Wire classid="WireOrthogonal" id="1029170213" name="" x="972" y="324" w="44" h="8" orient="0" layer="">
+          <vertex x="0" y="0" />
+          <vertex x="-36" y="0" />
+        </Wire>
+        <User classid="UserCmp" defn="master:xfmr-3p2w" id="984500741" x="396" y="324" w="92" h="60" z="30" orient="0" link="-1" layer="" q="4">
+          <paramlist link="-1" name="">
+            <param name="Name" value="" />
+            <param name="Tmva" value="100.0 [MVA]" />
+            <param name="f" value="60.0 [Hz]" />
+            <param name="YD1" value="0" />
+            <param name="YD2" value="0" />
+            <param name="Lead" value="1" />
+            <param name="Xl" value="0.06250 [pu]" />
+            <param name="Ideal" value="1" />
+            <param name="NLL" value="0.0 [pu]" />
+            <param name="CuL" value="0.0 [pu]" />
+            <param name="Tap" value="1" />
+            <param name="View" value="1" />
+            <param name="Dtls" value="0" />
+            <param name="V1" value="18.0 [kV]" />
+            <param name="V2" value="230.0 [kV]" />
+            <param name="Enab" value="0" />
+            <param name="Sat" value="1" />
+            <param name="Xair" value="0.2 [pu]" />
+            <param name="Tdc" value="0.0 [s]" />
+            <param name="Xknee" value="1.17 [pu]" />
+            <param name="Txk" value="0.0 [s]" />
+            <param name="Im1" value="2.0 [%]" />
+            <param name="ILA1" value="" />
+            <param name="ILB1" value="" />
+            <param name="ILC1" value="" />
+            <param name="IAB1" value="" />
+            <param name="IBC1" value="" />
+            <param name="ICA1" value="" />
+            <param name="ILA2" value="" />
+            <param name="ILB2" value="" />
+            <param name="ILC2" value="" />
+            <param name="IAB2" value="" />
+            <param name="IBC2" value="" />
+            <param name="ICA2" value="" />
+            <param name="IMA" value="" />
+            <param name="IMB" value="" />
+            <param name="IMC" value="" />
+            <param name="FLXA" value="" />
+            <param name="FLXB" value="" />
+            <param name="FLXC" value="" />
+            <param name="IMAB" value="" />
+            <param name="IMBC" value="" />
+            <param name="IMCA" value="" />
+            <param name="FLXAB" value="" />
+            <param name="FLXBC" value="" />
+            <param name="FLXCA" value="" />
+          </paramlist>
+        </User>
+        <Wire classid="WireOrthogonal" id="1514722717" name="" x="432" y="324" w="26" h="8" orient="0" layer="">
+          <vertex x="0" y="0" />
+          <vertex x="18" y="0" />
+        </Wire>
+        <Wire classid="WireOrthogonal" id="1329508432" name="" x="342" y="324" w="26" h="8" orient="0" layer="">
+          <vertex x="0" y="0" />
+          <vertex x="-18" y="0" />
+        </Wire>
+        <User classid="UserCmp" defn="master:fixed_load" id="1442847532" x="936" y="522" w="28" h="49" z="1" orient="4" link="-1" layer="" q="4">
+          <paramlist link="-1" name="">
+            <param name="PO" value="30.0 [MW]" />
+            <param name="QO" value="10.0 [MVAR]" />
+            <param name="VBO" value="132.790562 [kV]" />
+            <param name="NP" value="0" />
+            <param name="NQ" value="0" />
+            <param name="KPF" value="0" />
+            <param name="KQF" value="0" />
+            <param name="FR" value="60 [Hz]" />
+            <param name="Dtls" value="0" />
+            <param name="R1" value="" />
+            <param name="L1" value="" />
+            <param name="C1" value="" />
+          </paramlist>
+        </User>
+        <User classid="UserCmp" name="New_IEEE_09_CT:T6_9" id="2044306914" x="900" y="432" w="25" h="74" z="90" orient="3" defn="New_IEEE_09_CT:T6_9" link="-1" layer="" q="4">
+          <paramlist link="-1" name="">
+            <param name="Name" value="" />
+          </paramlist>
+        </User>
+        <User classid="UserCmp" name="New_IEEE_09_CT:T4_5" id="1426503440" x="558" y="558" w="74" h="25" z="100" orient="0" defn="New_IEEE_09_CT:T4_5" link="-1" layer="" q="4">
+          <paramlist link="-1" name="">
+            <param name="Name" value="" />
+          </paramlist>
+        </User>
+        <User classid="UserCmp" name="New_IEEE_09_CT:T4_6" id="1036163106" x="810" y="558" w="74" h="25" z="110" orient="0" defn="New_IEEE_09_CT:T4_6" link="-1" layer="" q="4">
+          <paramlist link="-1" name="">
+            <param name="Name" value="" />
+          </paramlist>
+        </User>
+        <User classid="UserCmp" defn="master:fixed_load" id="1412276095" x="702" y="342" w="49" h="28" z="1" orient="7" link="-1" layer="" q="4">
+          <paramlist link="-1" name="">
+            <param name="PO" value="33.33333 [MW]" />
+            <param name="QO" value="11.66667 [MVAR]" />
+            <param name="VBO" value="132.790562 [kV]" />
+            <param name="NP" value="0" />
+            <param name="NQ" value="0" />
+            <param name="KPF" value="0" />
+            <param name="KQF" value="0" />
+            <param name="FR" value="60 [Hz]" />
+            <param name="Dtls" value="0" />
+            <param name="R1" value="" />
+            <param name="L1" value="" />
+            <param name="C1" value="" />
+          </paramlist>
+        </User>
+        <User classid="UserCmp" name="New_IEEE_09_CT:T5_7" id="1200896919" x="486" y="432" w="25" h="74" z="80" orient="3" defn="New_IEEE_09_CT:T5_7" link="-1" layer="" q="4">
+          <paramlist link="-1" name="">
+            <param name="Name" value="" />
+          </paramlist>
+        </User>
+        <User classid="UserCmp" name="master:ground" id="1987012606" x="378" y="360" w="26" h="20" z="0" orient="2" defn="master:ground" link="-1" layer="" q="4">
+          <paramlist link="-1" name="" />
+        </User>
+        <Wire classid="WireOrthogonal" id="1573956918" name="" x="396" y="360" w="26" h="8" orient="0" layer="">
+          <vertex x="0" y="0" />
+          <vertex x="-18" y="0" />
+        </Wire>
+        <User classid="UserCmp" name="master:const" id="1636612243" x="342" y="270" w="17" h="67" z="20" orient="1" defn="master:const" link="-1" layer="" q="4">
+          <paramlist link="-1" name="">
+            <param name="Name" value="" />
+            <param name="Value" value="1" />
+          </paramlist>
+        </User>
+        <User classid="UserCmp" name="master:ground" id="1175821462" x="1026" y="360" w="26" h="20" z="0" orient="6" defn="master:ground" link="-1" layer="" q="4">
+          <paramlist link="-1" name="" />
+        </User>
+        <Wire classid="WireOrthogonal" id="1975464450" name="" x="1008" y="360" w="26" h="8" orient="0" layer="">
+          <vertex x="0" y="0" />
+          <vertex x="18" y="0" />
+        </Wire>
+        <User classid="UserCmp" name="master:const" id="440436553" x="1062" y="270" w="17" h="68" z="40" orient="7" defn="master:const" link="-1" layer="" q="4">
+          <paramlist link="-1" name="">
+            <param name="Name" value="" />
+            <param name="Value" value="1.0" />
+          </paramlist>
+        </User>
+        <User classid="UserCmp" defn="master:xfmr-3p2w" id="241387401" x="702" y="648" w="60" h="92" z="130" orient="5" link="-1" layer="" q="4">
+          <paramlist link="-1" name="">
+            <param name="Name" value="" />
+            <param name="Tmva" value="100.0 [MVA]" />
+            <param name="f" value="60.0 [Hz]" />
+            <param name="YD1" value="0" />
+            <param name="YD2" value="0" />
+            <param name="Lead" value="1" />
+            <param name="Xl" value="0.05760 [pu]" />
+            <param name="Ideal" value="1" />
+            <param name="NLL" value="0.0 [pu]" />
+            <param name="CuL" value="0.0 [pu]" />
+            <param name="Tap" value="1" />
+            <param name="View" value="1" />
+            <param name="Dtls" value="0" />
+            <param name="V1" value="16.5 [kV]" />
+            <param name="V2" value="230.0 [kV]" />
+            <param name="Enab" value="0" />
+            <param name="Sat" value="1" />
+            <param name="Xair" value="0.2 [pu]" />
+            <param name="Tdc" value="0.0 [s]" />
+            <param name="Xknee" value="1.17 [pu]" />
+            <param name="Txk" value="0.0 [s]" />
+            <param name="Im1" value="2.0 [%]" />
+            <param name="ILA1" value="" />
+            <param name="ILB1" value="" />
+            <param name="ILC1" value="" />
+            <param name="IAB1" value="" />
+            <param name="IBC1" value="" />
+            <param name="ICA1" value="" />
+            <param name="ILA2" value="" />
+            <param name="ILB2" value="" />
+            <param name="ILC2" value="" />
+            <param name="IAB2" value="" />
+            <param name="IBC2" value="" />
+            <param name="ICA2" value="" />
+            <param name="IMA" value="" />
+            <param name="IMB" value="" />
+            <param name="IMC" value="" />
+            <param name="FLXA" value="" />
+            <param name="FLXB" value="" />
+            <param name="FLXC" value="" />
+            <param name="IMAB" value="" />
+            <param name="IMBC" value="" />
+            <param name="IMCA" value="" />
+            <param name="FLXAB" value="" />
+            <param name="FLXBC" value="" />
+            <param name="FLXCA" value="" />
+          </paramlist>
+        </User>
+        <User classid="UserCmp" name="master:ground" id="151031884" x="666" y="666" w="20" h="26" z="0" orient="7" defn="master:ground" link="-1" layer="" q="4">
+          <paramlist link="-1" name="" />
+        </User>
+        <Wire classid="WireOrthogonal" id="319046123" name="" x="666" y="648" w="8" h="26" orient="0" layer="">
+          <vertex x="0" y="0" />
+          <vertex x="0" y="18" />
+        </Wire>
+        <Wire classid="Bus" name="" id="1406612849" x="450" y="288" w="35" h="80" orient="0" layer="">
+          <paramlist>
+            <param name="Name" value="Bus7" />
+            <param name="BaseKV" value="230" />
+            <param name="VRMS" value="#NaN" />
+          </paramlist>
+          <vertex x="0" y="0" />
+          <vertex x="0" y="72" />
+        </Wire>
+        <Wire classid="WireOrthogonal" id="168822164" name="" x="702" y="702" w="8" h="26" orient="0" layer="">
+          <vertex x="0" y="0" />
+          <vertex x="0" y="18" />
+        </Wire>
+        <User classid="UserCmp" name="master:const" id="1691065050" x="756" y="702" w="68" h="17" z="120" orient="4" defn="master:const" link="-1" layer="" q="4">
+          <paramlist link="-1" name="">
+            <param name="Name" value="" />
+            <param name="Value" value="1.0" />
+          </paramlist>
+        </User>
+        <User classid="UserCmp" name="New_IEEE_09_CT:T8_9" id="238356294" x="810" y="324" w="74" h="25" z="60" orient="0" defn="New_IEEE_09_CT:T8_9" link="-1" layer="" q="4">
+          <paramlist link="-1" name="">
+            <param name="Name" value="" />
+          </paramlist>
+        </User>
+        <Wire classid="WireOrthogonal" id="1550424272" name="" x="702" y="594" w="8" h="26" orient="0" layer="">
+          <vertex x="0" y="0" />
+          <vertex x="0" y="18" />
+        </Wire>
+        <User classid="UserCmp" name="master:source3" id="341249837" x="1224" y="324" w="74" h="35" z="1" orient="4" defn="master:source3" link="-1" layer="" q="4">
+          <paramlist link="-1" name="">
+            <param name="Name" value="Source1" />
+            <param name="Type" value="4" />
+            <param name="Ctrl" value="0" />
+            <param name="MVA" value="100.0 [MVA]" />
+            <param name="Vm" value="13.8 [kV]" />
+            <param name="F" value="60.0 [Hz]" />
+            <param name="Tc" value="0.05 [s]" />
+            <param name="ZSeq" value="0" />
+            <param name="Imp" value="1" />
+            <param name="Exph" value="0" />
+            <param name="View" value="1" />
+            <param name="Term" value="1" />
+            <param name="R1s" value="1.0 [ohm]" />
+            <param name="R1p" value="1.0 [ohm]" />
+            <param name="L1p" value="0.1 [H]" />
+            <param name="Z1" value="1.0 [ohm]" />
+            <param name="Phi1" value="80.0 [deg]" />
+            <param name="RN" value="2.0" />
+            <param name="R0p" value="1.0 [ohm]" />
+            <param name="L0p" value="0.1 [H]" />
+            <param name="Z0" value="1.0 [ohm]" />
+            <param name="Phi0" value="80.0 [deg]" />
+            <param name="Es" value="14.145 [kV]" />
+            <param name="F0" value="60.0 [Hz]" />
+            <param name="Ph" value="5.1420 [deg]" />
+            <param name="Pinit" value="0.85 [pu]" />
+            <param name="Qinit" value="-0.11449 [pu]" />
+            <param name="VCtrl" value="0" />
+            <param name="Vdes" value="1.0 [pu]" />
+            <param name="Vbase" value="230.0 [kV]" />
+            <param name="Tvm" value="0.02 [s]" />
+            <param name="Tvc" value="0.05 [s]" />
+            <param name="PCtrl" value="0" />
+            <param name="Pdes" value="1.0 [pu]" />
+            <param name="Tpm" value="0.02 [s]" />
+            <param name="Tpc" value="0.05 [s]" />
+            <param name="P" value="" />
+            <param name="Q" value="" />
+            <param name="V" value="" />
+            <param name="Theta" value="" />
+            <param name="Ia" value="" />
+            <param name="Ib" value="" />
+            <param name="Ic" value="" />
+            <param name="PS" value="0" />
+            <param name="R0s" value="1.0 [ohm]" />
+            <param name="L0s" value="0.0001 [H]" />
+          </paramlist>
+        </User>
+        <User classid="UserCmp" name="master:ground" id="2027484487" x="1260" y="324" w="26" h="20" z="0" orient="6" defn="master:ground" link="-1" layer="" q="4">
+          <paramlist link="-1" name="" />
+        </User>
+        <User classid="UserCmp" name="master:multimeter" id="1563743852" x="1170" y="324" w="60" h="94" z="1" orient="4" defn="master:multimeter" link="-1" layer="" q="4">
+          <paramlist link="-1" name="">
+            <param name="MeasI" value="0" />
+            <param name="MeasV" value="0" />
+            <param name="MeasP" value="1" />
+            <param name="MeasQ" value="1" />
+            <param name="RMS" value="1" />
+            <param name="MeasPh" value="0" />
+            <param name="S" value="100.0 [MVA]" />
+            <param name="BaseV" value="13.8 [kV]" />
+            <param name="TS" value="0.02 [s]" />
+            <param name="Freq" value="60.0 [Hz]" />
+            <param name="Dis" value="1" />
+            <param name="CurI" value="" />
+            <param name="VolI" value="" />
+            <param name="P" value="" />
+            <param name="Q" value="" />
+            <param name="Vrms" value="" />
+            <param name="Ph" value="" />
+            <param name="hide1" value="1" />
+            <param name="hide2" value="1" />
+            <param name="Pd" value="0.8512" />
+            <param name="Qd" value="-0.117" />
+            <param name="Vd" value="1.027" />
+            <param name="IRMS" value="0" />
+            <param name="BaseA" value="1.0" />
+            <param name="Crms" value="" />
+          </paramlist>
+        </User>
+        <Wire classid="WireOrthogonal" id="1446193370" name="" x="1152" y="324" w="62" h="8" orient="0" layer="">
+          <vertex x="0" y="0" />
+          <vertex x="-54" y="0" />
+        </Wire>
+        <Wire classid="WireOrthogonal" id="1254644501" name="" x="288" y="324" w="44" h="8" orient="0" layer="">
+          <vertex x="0" y="0" />
+          <vertex x="36" y="0" />
+        </Wire>
+        <Wire classid="Bus" name="" id="174893742" x="684" y="288" w="35" h="80" orient="0" layer="">
+          <paramlist>
+            <param name="Name" value="Bus8" />
+            <param name="BaseKV" value="230" />
+            <param name="VRMS" value="#NaN" />
+          </paramlist>
+          <vertex x="0" y="0" />
+          <vertex x="0" y="72" />
+        </Wire>
+        <User classid="UserCmp" name="New_IEEE_09_CT:T7_8" id="8336909" x="576" y="324" w="74" h="25" z="50" orient="0" defn="New_IEEE_09_CT:T7_8" link="-1" layer="" q="4">
+          <paramlist link="-1" name="">
+            <param name="Name" value="" />
+          </paramlist>
+        </User>
+        <Wire classid="WireOrthogonal" id="594025085" name="" x="540" y="324" w="98" h="8" orient="0" layer="">
+          <vertex x="0" y="0" />
+          <vertex x="-90" y="0" />
+        </Wire>
+        <Wire classid="WireOrthogonal" id="1797596936" name="" x="612" y="324" w="80" h="8" orient="0" layer="">
+          <vertex x="0" y="0" />
+          <vertex x="72" y="0" />
+        </Wire>
+        <Wire classid="WireOrthogonal" id="314764277" name="" x="684" y="324" w="98" h="8" orient="0" layer="">
+          <vertex x="0" y="0" />
+          <vertex x="90" y="0" />
+        </Wire>
+        <Wire classid="WireOrthogonal" id="238150265" name="" x="846" y="324" w="98" h="8" orient="0" layer="">
+          <vertex x="0" y="0" />
+          <vertex x="90" y="0" />
+        </Wire>
+        <Wire classid="WireOrthogonal" id="292572689" name="" x="1062" y="324" w="44" h="8" orient="0" layer="">
+          <vertex x="0" y="0" />
+          <vertex x="36" y="0" />
+        </Wire>
+        <Wire classid="WireOrthogonal" id="1298037096" name="" x="486" y="468" w="8" h="44" orient="0" layer="">
+          <vertex x="0" y="0" />
+          <vertex x="0" y="36" />
+        </Wire>
+        <Wire classid="WireOrthogonal" id="1761742013" name="" x="486" y="396" w="44" h="62" orient="0" layer="">
+          <vertex x="0" y="0" />
+          <vertex x="0" y="-54" />
+          <vertex x="-36" y="-54" />
+        </Wire>
+        <Wire classid="Bus" name="" id="1125170604" x="846" y="504" w="116" h="22" orient="0" layer="">
+          <paramlist>
+            <param name="Name" value="Bus6" />
+            <param name="BaseKV" value="230" />
+            <param name="VRMS" value="#NaN" />
+          </paramlist>
+          <vertex x="0" y="0" />
+          <vertex x="108" y="0" />
+        </Wire>
+        <Wire classid="WireOrthogonal" id="963451795" name="" x="900" y="468" w="8" h="44" orient="0" layer="">
+          <vertex x="0" y="0" />
+          <vertex x="0" y="36" />
+        </Wire>
+        <Wire classid="WireOrthogonal" id="1849945864" name="" x="900" y="396" w="44" h="62" orient="0" layer="">
+          <vertex x="0" y="0" />
+          <vertex x="0" y="-54" />
+          <vertex x="36" y="-54" />
+        </Wire>
+        <Wire classid="WireOrthogonal" id="1170996194" name="" x="864" y="504" w="26" h="62" orient="0" layer="">
+          <vertex x="0" y="0" />
+          <vertex x="0" y="54" />
+          <vertex x="-18" y="54" />
+        </Wire>
+        <Wire classid="WireOrthogonal" id="676534284" name="" x="774" y="558" w="44" h="44" orient="0" layer="">
+          <vertex x="0" y="0" />
+          <vertex x="-36" y="0" />
+          <vertex x="-36" y="36" />
+        </Wire>
+        <Wire classid="WireOrthogonal" id="198397964" name="" x="594" y="558" w="80" h="44" orient="0" layer="">
+          <vertex x="0" y="0" />
+          <vertex x="72" y="0" />
+          <vertex x="72" y="36" />
+        </Wire>
+        <Wire classid="WireOrthogonal" id="1073304061" name="" x="522" y="558" w="26" h="62" orient="0" layer="">
+          <vertex x="0" y="0" />
+          <vertex x="-18" y="0" />
+          <vertex x="-18" y="-54" />
+        </Wire>
+        <Wire classid="Bus" name="" id="1997536541" x="306" y="288" w="35" h="80" orient="0" layer="">
+          <paramlist>
+            <param name="Name" value="Bus2" />
+            <param name="BaseKV" value="18" />
+            <param name="VRMS" value="#NaN" />
+          </paramlist>
+          <vertex x="0" y="0" />
+          <vertex x="0" y="72" />
+        </Wire>
+        <Wire classid="Bus" name="" id="406097368" x="1080" y="288" w="35" h="80" orient="0" layer="">
+          <paramlist>
+            <param name="Name" value="Bus3" />
+            <param name="BaseKV" value="13.8" />
+            <param name="VRMS" value="#NaN" />
+          </paramlist>
+          <vertex x="0" y="0" />
+          <vertex x="0" y="72" />
+        </Wire>
+        <Wire classid="Bus" name="" id="176582973" x="612" y="594" w="170" h="22" orient="0" layer="">
+          <paramlist>
+            <param name="Name" value="Bus4" />
+            <param name="BaseKV" value="230" />
+            <param name="VRMS" value="#NaN" />
+          </paramlist>
+          <vertex x="0" y="0" />
+          <vertex x="162" y="0" />
+        </Wire>
+        <Wire classid="Bus" name="" id="496201250" x="648" y="738" w="98" h="22" orient="0" layer="">
+          <paramlist>
+            <param name="Name" value="Bus1" />
+            <param name="BaseKV" value="16.5" />
+            <param name="VRMS" value="#NaN" />
+          </paramlist>
+          <vertex x="0" y="0" />
+          <vertex x="90" y="0" />
+        </Wire>
+      </schematic>
+      <references>
+        <using namespace="master" />
+      </references>
+    </Definition>
+  </definitions>
+  <output name="New_IEEE_09_AD" device="EMTDC" version="2010" date="2014/08/20" time="13:17:29.000000">
+    <paramlist />
+    <domain name="Time" unit="s" mult="0.0" skew="0.0">
+      <sample rate="20000.0" end="40000" />
+    </domain>
+    <analog />
+    <digital />
+  </output>
+</project>
