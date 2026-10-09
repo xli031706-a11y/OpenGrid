@@ -95,3 +95,111 @@ ylabel("Loading (% of MVA rating)");
 title("Branch thermal loading")
 
 sgtitle(studyName, "FontWeight", "bold");
+
+% ---------------- Figure 2: IEEE 9-bus one-line result display -----------
+figNetwork = figure("Color", "w", "Name", studyName + " - One Line");
+ax = axes(figNetwork); hold(ax, "on"); axis(ax, "equal"); axis(ax, "off");
+title(ax, studyName + " — One-Line Power-Flow Display", "FontWeight", "bold");
+
+for k = 1:height(branch)
+    fromXY = coords(branch.From(k), :);
+    toXY = coords(branch.To(k), :);
+    [lineColor, lineStyle] = loadingStyle(branch.Loading_pct(k));
+    width = 1.5 + 5 * min(branch.Loading_pct(k) / 100, 1);
+    plot(ax, [fromXY(1), toXY(1)], [fromXY(2), toXY(2)], ...
+        "Color", lineColor, "LineStyle", lineStyle, "LineWidth", width);
+
+    midpoint = (fromXY + toXY) / 2;
+    text(ax, midpoint(1), midpoint(2)+0.16, ...
+        sprintf("%d-%d: %.1f MVA (%.0f%%)", branch.From(k), branch.To(k), ...
+        branch.Flow_MVA(k), branch.Loading_pct(k)), ...
+        "HorizontalAlignment", "center", "FontSize", 8, "BackgroundColor", "w");
+end
+
+scatter(ax, coords(:,1), coords(:,2), 650, bus.Vm_pu, "filled", ...
+    "MarkerEdgeColor", [0.10 0.10 0.10], "LineWidth", 1.1);
+colormap(ax, parula); cb = colorbar(ax); cb.Label.String = "Bus voltage (p.u.)";
+caxis(ax, [min(0.94, min(bus.Vm_pu)), max(1.06, max(bus.Vm_pu))]);
+
+for k = 1:height(bus)
+    busLabel = sprintf("Bus %d\\n%.3f p.u. | %.1f°", ...
+        bus.Bus(k), bus.Vm_pu(k), bus.Va_deg(k));
+    text(ax, coords(k,1), coords(k,2), busLabel, "HorizontalAlignment", "center", ...
+        "VerticalAlignment", "middle", "FontWeight", "bold", "FontSize", 8);
+    annotationText = sprintf("G %.0f MW | L %.0f MW", bus.Pg_MW(k), bus.Pd_MW(k));
+    text(ax, coords(k,1), coords(k,2)-0.42, annotationText, ...
+        "HorizontalAlignment", "center", "FontSize", 7);
+end
+
+text(ax, 0.0, 0.25, "Branch color: blue < 80%, orange 80–100%, red > 100%", ...
+    "FontSize", 9, "FontWeight", "bold");
+xlim(ax, [-0.8 8.8]); ylim(ax, [0.0 4.7]);
+
+% -------------------- Figure 3: losses and balance -----------------------
+figLoss = figure("Color", "w", "Name", studyName + " - Losses");
+tiledlayout(figLoss, 1, 2, "Padding", "compact", "TileSpacing", "compact");
+
+nexttile
+bar(categorical(branchName), branch.Loss_MW, "FaceColor", [0.49 0.18 0.56]);
+xtickangle(45); grid on
+ylabel("Real-power loss (MW)");
+title("Branch real-power losses")
+
+nexttile
+totals = [sum(bus.Pg_MW), sum(bus.Pd_MW), sum(branch.Loss_MW)];
+bar(categorical(["Generation", "Load", "Calculated losses"]), totals, ...
+    "FaceColor", [0.30 0.75 0.93]);
+grid on; ylabel("MW");
+title(sprintf("System balance error = %.3f MW", totals(1)-totals(2)-totals(3)))
+
+summary = struct;
+summary.studyName = studyName;
+summary.bus = bus;
+summary.branch = branch;
+summary.totalGenerationMW = sum(bus.Pg_MW);
+summary.totalLoadMW = sum(bus.Pd_MW);
+summary.totalLossMW = sum(branch.Loss_MW);
+summary.powerBalanceErrorMW = summary.totalGenerationMW - summary.totalLoadMW - summary.totalLossMW;
+summary.overloadedBranches = branch(branch.Loading_pct > 100, :);
+
+fprintf("\n%s\n", studyName);
+fprintf("  Generation: %.3f MW\n", summary.totalGenerationMW);
+fprintf("  Load:       %.3f MW\n", summary.totalLoadMW);
+fprintf("  Losses:     %.3f MW\n", summary.totalLossMW);
+fprintf("  Balance error: %.3f MW\n", summary.powerBalanceErrorMW);
+if isempty(summary.overloadedBranches)
+    fprintf("  No branches exceed their MVA rating.\n\n");
+else
+    fprintf("  WARNING: %d branch(es) exceed their MVA rating.\n\n", ...
+        height(summary.overloadedBranches));
+end
+
+if strlength(outputFolder) > 0
+    if ~isfolder(outputFolder)
+        mkdir(outputFolder);
+    end
+    safeName = regexprep(studyName, "[^A-Za-z0-9_-]", "_");
+    exportgraphics(figProfile, fullfile(outputFolder, safeName + "_profile.png"), "Resolution", 300);
+    exportgraphics(figNetwork, fullfile(outputFolder, safeName + "_one_line.png"), "Resolution", 300);
+    exportgraphics(figLoss, fullfile(outputFolder, safeName + "_losses.png"), "Resolution", 300);
+    writetable(branch, fullfile(outputFolder, safeName + "_branch_summary.csv"));
+end
+end
+
+function mustHaveColumns(T, requiredNames, tableName)
+missingNames = requiredNames(~ismember(requiredNames, string(T.Properties.VariableNames)));
+assert(isempty(missingNames), "%s is missing columns: %s", tableName, strjoin(missingNames, ", "));
+end
+
+function [lineColor, lineStyle] = loadingStyle(loadingPct)
+if loadingPct > 100
+    lineColor = [0.85 0.10 0.10];
+    lineStyle = "-";
+elseif loadingPct >= 80
+    lineColor = [0.93 0.49 0.19];
+    lineStyle = "-";
+else
+    lineColor = [0.00 0.45 0.74];
+    lineStyle = "-";
+end
+end
